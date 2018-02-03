@@ -11,12 +11,12 @@ import java.util.Properties;
 
 import static edu.stanford.nlp.util.Characters.isPunctuation;
 
-public class analytics_processor {
+public class verb_histogram {
 
 
     public static void main(String args[]) {
         Properties props = new Properties();
-        props.put("annotators", "tokenize, ssplit, pos, lemma, ner");
+        props.put("annotators", "tokenize, ssplit, pos");
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 
         String text = "President Trump delivered a speech in UCSD; it was very good";
@@ -28,13 +28,11 @@ public class analytics_processor {
         List<CoreLabel> tokens = document.get(CoreAnnotations.TokensAnnotation.class);
         for (CoreLabel tokensInfo : tokens) {
             String token = tokensInfo.get(CoreAnnotations.TextAnnotation.class);
-            String lemma = tokensInfo.get(CoreAnnotations.LemmaAnnotation.class);
             String pos = tokensInfo.get(CoreAnnotations.PartOfSpeechAnnotation.class);
-            String ner = tokensInfo.get(CoreAnnotations.NamedEntityTagAnnotation.class);
 
             //String dependencies = tokensInfo.get(CoreAnnotations.DependentsAnnotation.class);
-
-            results.add("Token: " + token + "| Lemma: " + lemma + "| POS: "+ pos + "| NER:" + ner + "\n");
+           // sentence.get(SemanticGraphCoreAnnotations.BasicDependenciesAnnotation.class)
+            results.add("Token: " + token + "| POS: "+ pos + "\n");
         }
 
         for(String result:results) {
