@@ -19,7 +19,7 @@ public class analytics_processor {
         props.put("annotators", "tokenize, ssplit, pos, lemma, ner");
         StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 
-        String text = "Barack Obama delivered a speech";
+        String text = "President Trump delivered a speech in UCSD; it was very good";
 
         Annotation document = new Annotation(text);
         pipeline.annotate(document);
@@ -32,7 +32,8 @@ public class analytics_processor {
             String pos = tokensInfo.get(CoreAnnotations.PartOfSpeechAnnotation.class);
             String ner = tokensInfo.get(CoreAnnotations.NamedEntityTagAnnotation.class);
 
-            results.add("Token: " + token + "; Lemma: " + lemma + "; POS: "+ pos + "; NER:" + ner + "\n");
+            //String dependencies = tokensInfo.get(CoreAnnotations.DependentsAnnotation.class);
+
         }
 
         for(String result:results) {
