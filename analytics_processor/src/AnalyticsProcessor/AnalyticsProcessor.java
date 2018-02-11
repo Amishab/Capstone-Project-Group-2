@@ -15,6 +15,7 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.trees.UniversalEnglishGrammaticalRelations;
 import edu.stanford.nlp.util.CoreMap;
+import edu.stanford.nlp.util.Index;
 
 import java.util.*;
 
@@ -48,6 +49,16 @@ public class AnalyticsProcessor {
         System.out.println(idMap.toString());
     }
 
+    private IndexedWord findNmodChildren(SemanticGraph dependencies, IndexedWord rootVerb)
+    {
+        for (SemanticGraphEdge edge : dependencies.outgoingEdgeIterable(rootVerb)) {
+            if (edge.getRelation().toString().contains("nmod")) {
+                return edge.getTarget();
+            }
+        }
+
+        return null;
+    }
     private void buildDependency(SemanticGraph dependencies) {
         IndexedWord rootVerb = dependencies.getFirstRoot();
         System.out.println(rootVerb.toString());
@@ -55,6 +66,10 @@ public class AnalyticsProcessor {
         List<SemanticGraphEdge> outEdges = dependencies.getOutEdgesSorted(rootVerb);
 
         Set<IndexedWord> nsubjs = dependencies.getChildrenWithReln(rootVerb, UniversalEnglishGrammaticalRelations.NOMINAL_SUBJECT);
+
+//        for (SemanticGraphEdge edge : dependencies.outgoingEdgeIterable(rootVerb)) {
+//            System.out.println(edge.getRelation());
+//        }
 
         for (IndexedWord nsubj: nsubjs) {
             if (nsubjs.size() == 1) {
@@ -66,12 +81,20 @@ public class AnalyticsProcessor {
 
         System.out.println("Relation: " + rootVerb.originalText());
 
-        //        Set<IndexedWord> nmods = dependencies.getChildrenWithReln(rootVerb, UniversalEnglishGrammaticalRelations.NOMINAL_MODIFIER);
-        Set<IndexedWord> nmods = dependencies.getChildrenWithReln(rootVerb, UniversalEnglishGrammaticalRelations.getNmod("at"));
-
-        for (IndexedWord nmod: nmods)   {
-            createNode(nmod.originalText());
+        IndexedWord nmod = findNmodChildren(dependencies,rootVerb);
+        if (nmod != null)   {
+            String compound_string = compoundStrings(dependencies, nmod);
+            createNode(compound_string);
         }
+        else    {
+
+        }
+//        //        Set<IndexedWord> nmods = dependencies.getChildrenWithReln(rootVerb, UniversalEnglishGrammaticalRelations.NOMINAL_MODIFIER);
+//        Set<IndexedWord> nmods = dependencies.getChildrenWithReln(rootVerb, UniversalEnglishGrammaticalRelations.getNmod("at"));
+//
+//        for (IndexedWord nmod: nmods)   {
+//            createNode(nmod.originalText());
+//        }
 
         //Set<GrammaticalRelation> rela = dependencies.childRelns(rootVerb);
 
@@ -203,10 +226,10 @@ public class AnalyticsProcessor {
             buildDependency(dependencies);
 
 //            List<SemanticGraphEdge> list = dependencies.edgeListSorted();
-
-            List<SemanticGraphEdge> list = dependencies.outgoingEdgeList(dependencies.getFirstRoot());
-
-            this.buildDependency(list);
+//
+//            List<SemanticGraphEdge> list = dependencies.outgoingEdgeList(dependencies.getFirstRoot());
+//
+//            this.buildDependency(list);
 
         }
 
