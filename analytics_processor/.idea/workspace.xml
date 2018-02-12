@@ -29,8 +29,8 @@
       <file leaf-file-name="AnalyticsProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AnalyticsProcessor/AnalyticsProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="67" column="129" lean-forward="false" selection-start-line="67" selection-start-column="114" selection-end-line="67" selection-end-column="129" />
+            <state relative-caret-position="402">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -306,12 +306,12 @@
       <updated>1517650647317</updated>
       <workItem from="1517650650429" duration="1952000" />
       <workItem from="1518043744117" duration="20000" />
-      <workItem from="1518045724254" duration="25812000" />
+      <workItem from="1518045724254" duration="26666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27784000" />
+    <option name="totallyTimeSpent" value="28638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -518,9 +518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="199" column="0" lean-forward="false" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding>
-            <element signature="e#5294#5295#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -542,8 +540,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AnalyticsProcessor/AnalyticsProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="67" column="129" lean-forward="false" selection-start-line="67" selection-start-column="114" selection-end-line="67" selection-end-column="129" />
+        <state relative-caret-position="402">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
