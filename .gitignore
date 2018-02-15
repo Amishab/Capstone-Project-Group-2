@@ -99,3 +99,4 @@ ENV/
 
 # mypy
 .mypy_cache/
+analytics_processor/.idea/workspace.xml
