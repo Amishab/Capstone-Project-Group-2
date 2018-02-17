@@ -1,0 +1,23 @@
+	{ 
+		SourceNode:
+					{
+						Identifier: BO
+						NERLabel: PERSON
+					}
+		
+		Relation: 
+					{
+						Identifier: delivered
+					}
+		TargetNode: 
+					{
+						Identifier: UCSD
+						NERLabel: Organization
+					}
+		
+		ID: 
+			{
+				DocumentID: 2
+				SentenceID: 1
+			}
+	}

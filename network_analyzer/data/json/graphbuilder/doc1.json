@@ -1,0 +1,40 @@
+{
+	{ 
+		SourceNode: {
+						Identifier: KL, CG, DF
+						NERLabel: PERSON, PERSON, PERSON
+					}
+		
+		Relation: 
+					{
+						Identifier: Wrote
+					}
+		
+		
+		TargetNode: 
+					{
+						Identifier: Letter
+						NERLabel: O
+					}
+		
+		ID: 
+			{
+				DocumentID: 1
+				SentenceID: 1
+			}
+	}
+	{
+		SourceNode: 
+					{
+						Identifier: Kushner
+						NERLabel: PERSON
+					}
+		ID: 
+			{
+				DocumentID: 1
+				SentenceID: 1
+			}	
+	}
+	
+	
+}
