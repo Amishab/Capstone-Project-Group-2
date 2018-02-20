@@ -16,11 +16,32 @@ import edu.stanford.nlp.trees.TreeCoreAnnotations;
 import edu.stanford.nlp.trees.UniversalEnglishGrammaticalRelations;
 import edu.stanford.nlp.util.CoreMap;
 import edu.stanford.nlp.util.Index;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class AnalyticsProcessor {
     StanfordCoreNLP pipeline;
+    ArrayList<NewsArticles> newsArticles;
+    JSONArray jsonGraphArray = new JSONArray();
+    String inFileName = "data/json/graphbuilder/test1.json";
+    String outFileName = "data/json/graphbuilder/test1graph.json";
+
+    private class NewsArticles   {
+        String newsArticle;
+        String newsID;
+
+        NewsArticles (String news, Long id) {
+            newsArticle = news;
+            newsID = id.toString();
+        }
+
+    }
 
     public AnalyticsProcessor()
     {
@@ -28,86 +49,25 @@ public class AnalyticsProcessor {
         props.put("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
         this.pipeline = new StanfordCoreNLP(props);
 
+        this.newsArticles = new ArrayList<>();
+
+        this.loadJSON(inFileName);
+
     }
 
-    private void buildTree(Tree root, List<CoreLabel> map) {
-        Iterator<Tree> it = root.iterator();
-
-        HashMap<String, String> idMap = new HashMap<>();
-        int leafIndex = 1;
-
-        int nodeIdx = 1;
-        while (it.hasNext()) {
-            Tree curr = it.next();
-
-            String nodeId = "node " + nodeIdx++;
-            String nodeVal = curr.value();
-
-            idMap.put(nodeId, nodeVal);
-        }
-
-        System.out.println(idMap.toString());
-    }
-
-    private IndexedWord findNmodChildren(SemanticGraph dependencies, IndexedWord rootVerb)
+    private Set<IndexedWord> findNmodChildren(SemanticGraph dependencies, IndexedWord rootVerb)
     {
+        Set<IndexedWord> nmodChilds = new HashSet<>();
+
         for (SemanticGraphEdge edge : dependencies.outgoingEdgeIterable(rootVerb)) {
             if (edge.getRelation().toString().contains("nmod")) {
-                return edge.getTarget();
+                nmodChilds.add(edge.getTarget());
             }
         }
 
-
-        return null;
+        return nmodChilds;
     }
-    private void buildDependency(SemanticGraph dependencies) {
-        IndexedWord rootVerb = dependencies.getFirstRoot();
-        System.out.println(rootVerb.toString());
 
-        List<SemanticGraphEdge> outEdges = dependencies.getOutEdgesSorted(rootVerb);
-
-        Set<IndexedWord> nsubjs = dependencies.getChildrenWithReln(rootVerb, UniversalEnglishGrammaticalRelations.NOMINAL_SUBJECT);
-
-//        for (SemanticGraphEdge edge : dependencies.outgoingEdgeIterable(rootVerb)) {
-//            System.out.println(edge.getRelation());
-//        }
-
-        for (IndexedWord nsubj: nsubjs) {
-            if (nsubjs.size() == 1) {
-                String compound_string = compoundStrings(dependencies, nsubj);
-
-                createNode(compound_string);
-            }
-        }
-
-        System.out.println("Relation: " + rootVerb.originalText());
-
-        IndexedWord nmod = findNmodChildren(dependencies,rootVerb);
-        if (nmod != null)   {
-            String compound_string = compoundStrings(dependencies, nmod);
-            createNode(compound_string);
-        }
-        else    {
-
-        }
-//        //        Set<IndexedWord> nmods = dependencies.getChildrenWithReln(rootVerb, UniversalEnglishGrammaticalRelations.NOMINAL_MODIFIER);
-//        Set<IndexedWord> nmods = dependencies.getChildrenWithReln(rootVerb, UniversalEnglishGrammaticalRelations.getNmod("at"));
-//
-//        for (IndexedWord nmod: nmods)   {
-//            createNode(nmod.originalText());
-//        }
-
-        //Set<GrammaticalRelation> rela = dependencies.childRelns(rootVerb);
-
-        //System.out.println(rela.toString());
-    }
-//
-//    private GrammaticalRelation getRelation(SemanticGraph dependencies) {
-//
-//        Set<GrammaticalRelation> rela = dependencies.childRelns(rootVerb);
-//        for (rel <GrammaticalRelation> )
-//        rela.iterator().next().getShortName().contains("nmod");
-//    }
     private String getNer(String compound_string) {
 
         String ner_label = null;
@@ -133,107 +93,159 @@ public class AnalyticsProcessor {
 
         return ner_label;
     }
-    private String compoundStrings (SemanticGraph dependencies, IndexedWord tmp_word) {
-        Set<IndexedWord> compound_nsubjs = dependencies.getChildrenWithReln(tmp_word, UniversalEnglishGrammaticalRelations.COMPOUND_MODIFIER);
-        String compound_string = tmp_word.originalText();
 
-        for(IndexedWord compound_nsubj : compound_nsubjs) {
-            compound_string =  String.join(" ",compound_nsubj.originalText(), compound_string);
+    private String getAppos(SemanticGraph dependencies, IndexedWord tmp_word) {
+
+        ArrayList<String> appos = new ArrayList<>();
+
+        Set<IndexedWord> apposQualifiers = dependencies.getChildrenWithReln(tmp_word,
+                UniversalEnglishGrammaticalRelations.APPOSITIONAL_MODIFIER);
+
+        if(!apposQualifiers.isEmpty())   {
+
+            for(IndexedWord apposQualifier:apposQualifiers)   {
+                appos.add(apposQualifier.originalText());
+
+                Set<IndexedWord> dependents = dependencies.getChildren(apposQualifier);
+                for(IndexedWord dependent:dependents)   {
+                    appos.add(dependent.originalText());
+                }
+            }
         }
 
-        return compound_string;
+        return appos.toString();
     }
-    private void createNode(String compound_string)
-    {
-        // Extract NER of this string
-        Annotation doc = new Annotation(compound_string);
-        pipeline.annotate(doc);
+    private JSONObject getAdditionalNodeInfo(SemanticGraph dependencies, IndexedWord tmp_word) {
+        JSONObject jsonObj = new JSONObject();
 
-        String ner_label = getNer(compound_string);
+        jsonObj.put("NERLabel", tmp_word.ner());
+        jsonObj.put("Qualifier", getAppos(dependencies,tmp_word));
 
-        System.out.println("Node: " + compound_string + " : " + ner_label);
+        return jsonObj;
     }
-    private void buildDependency(List<SemanticGraphEdge> edgeList) {
-        ListIterator<SemanticGraphEdge> it = edgeList.listIterator();
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int uid = 0;
 
-        while (it.hasNext()) {
-            SemanticGraphEdge edge = it.next();
-            String source = edge.getSource().value();
-            int sourceIdx = edge.getSource().index();
-            if (!map.containsKey(new Integer(sourceIdx)))
-                map.put(sourceIdx, uid++);
+    private JSONArray compoundStrings (SemanticGraph dependencies, Set<IndexedWord> tmp_words) {
+        JSONArray compoundJsonArray = new JSONArray();
 
-            String target = edge.getTarget().value();
-            int targetIdx = edge.getTarget().index();
-            if (!map.containsKey(new Integer(targetIdx)))
-                map.put(targetIdx, uid++);
+        ArrayList<String> compoundStringList = new ArrayList<>();
 
-            String relation = edge.getRelation().toString();
+        for (IndexedWord tmp_word : tmp_words) {
+            JSONObject compoundJsonObj = new JSONObject();
+            Set<IndexedWord> compound_nsubjs = dependencies.getChildrenWithReln(tmp_word,
+                    UniversalEnglishGrammaticalRelations.COMPOUND_MODIFIER);
+            String compound_string = tmp_word.originalText();
 
-            System.out.println(source+":-"+relation+"> "+target);
+            for (IndexedWord compound_nsubj : compound_nsubjs) {
+                compound_string = String.join(" ", compound_nsubj.originalText(), compound_string);
+            }
+            compoundStringList.add(compound_string);
+
+            compoundJsonObj.put("NodeID", compound_string);
+            // append addtional information
+            compoundJsonObj.put("MetaInfo",getAdditionalNodeInfo(dependencies, tmp_word));
+
+            compoundJsonArray.add(compoundJsonObj);
         }
+
+        return compoundJsonArray;
+    }
+    private void createNode(String node, String compound_string) {
+        JSONObject jsonobj = new JSONObject();
+
+        System.out.println("Node: " + compound_string);
     }
 
-    public void build(String text)
-    {
-        Annotation document = new Annotation(text);
-        pipeline.annotate(document);
-        List<String> results = new ArrayList<>();
+    private JSONObject buildDependency(SemanticGraph dependencies) {
+        JSONObject jsonGraphObj = new JSONObject();
+        IndexedWord rootVerb = dependencies.getFirstRoot();
 
-        // these are all the sentences in this document
-        // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
-        List<CoreMap> sentences = document.get(CoreAnnotations.SentencesAnnotation.class);
+        Set<IndexedWord> nsubjs = dependencies.getChildrenWithReln(rootVerb,
+                UniversalEnglishGrammaticalRelations.NOMINAL_SUBJECT);
 
-        for (CoreMap sentence : sentences) {
-            // traversing the words in the current sentence
-            // a CoreLabel is a CoreMap with additional token-specific methods
-            List<CoreLabel> tokens = sentence.get(CoreAnnotations.TokensAnnotation.class);
+        if (!nsubjs.isEmpty()) {
+            JSONArray compoundJsonArr = compoundStrings(dependencies, nsubjs);
+            jsonGraphObj.put("SourceNode", compoundJsonArr);
+        }
+        else {
 
-            for (CoreLabel tokensInfo : tokens) {
-                // this is the text of the token
-                String token = tokensInfo.get(CoreAnnotations.TextAnnotation.class);
+        }
 
-                // this is the lemma of the token
-                String lemma = tokensInfo.get(CoreAnnotations.LemmaAnnotation.class);
+        jsonGraphObj.put("Relation: ", rootVerb.lemma());
 
-                // this is the POS tag of the token
-                String pos = tokensInfo.get(CoreAnnotations.PartOfSpeechAnnotation.class);
+        Set<IndexedWord> nmodChilds = findNmodChildren(dependencies,rootVerb);
+        if (!nmodChilds.isEmpty())   {
+            JSONArray compoundJsonArr = compoundStrings(dependencies, nmodChilds);
+            jsonGraphObj.put("TargetNode", compoundJsonArr);
+        }
+        else    {
+            Set<IndexedWord> dobjChilds = dependencies.getChildrenWithReln(rootVerb,
+                    UniversalEnglishGrammaticalRelations.OBJECT);
 
-                // this is the NER label of the token
-                String ner = tokensInfo.get(CoreAnnotations.NamedEntityTagAnnotation.class);
+            if (!dobjChilds.isEmpty())   {
+                JSONArray compoundJsonArr  = compoundStrings(dependencies, dobjChilds);
+                jsonGraphObj.put("TargetNode", compoundJsonArr );
+            }
+        }
 
-                results.add("Token: " + token + "; Lemma: " + lemma + "; POS: " + pos + "; NER:" + ner + "\n");
+        return jsonGraphObj;
+    }
+
+    private void loadJSON(String filename) {
+        JSONParser parser = new JSONParser();
+
+        try {
+            FileReader fileReader = new FileReader(filename);
+            JSONArray jsonArray = (JSONArray) parser.parse(fileReader);
+
+            Iterator i = jsonArray.iterator();
+
+            while (i.hasNext())
+            {
+                JSONObject jsonObject = (JSONObject)i.next();
+                String news = (String) jsonObject.get("news");
+                Long newsId = (Long) jsonObject.get("newsId");
+
+                this.newsArticles.add(new NewsArticles(news, newsId));
             }
 
-            for (String result : results) {
-                System.out.println(result);
-            }
-
-//            // this is the parse tree of the current sentence
-//            Tree tree = sentence.get(TreeCoreAnnotations.TreeAnnotation.class);
-//            tree.setSpans();
-//
-//            System.out.println(tree.toString());
-//
-//            buildTree(tree, tokens);
-
-
-            // this is the Stanford dependency graph of the current sentence
-            SemanticGraph dependencies = sentence.get(SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class);
-            System.out.println(dependencies.toString());
-
-            buildDependency(dependencies);
-
-//            List<SemanticGraphEdge> list = dependencies.edgeListSorted();
-//
-//            List<SemanticGraphEdge> list = dependencies.outgoingEdgeList(dependencies.getFirstRoot());
-//
-//            this.buildDependency(list);
-
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
+   }
 
+    public void build()
+    {
+        for (NewsArticles newsArticle: newsArticles) {
+            String text = newsArticle.newsArticle;
+            String docID = newsArticle.newsID;
+
+            Annotation document = new Annotation(text);
+            pipeline.annotate(document);
+
+            // these are all the sentences in this document
+            // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
+            List<CoreMap> sentences = document.get(CoreAnnotations.SentencesAnnotation.class);
+
+            int sentenceID = 0;
+            for (CoreMap sentence : sentences) {
+                JSONObject jsonGraphObj;
+                sentenceID++;
+
+                // this is the Stanford dependency graph of the current sentence
+                SemanticGraph dependencies = sentence.get(SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class);
+                //            System.out.println(dependencies.toString());
+                jsonGraphObj = buildDependency(dependencies);
+
+                JSONObject jsonIDobj = new JSONObject();
+                jsonIDobj.put("DocumentID", docID);
+                jsonIDobj.put("SentenceID", sentenceID);
+
+                jsonGraphObj.put("ID",jsonIDobj);
+
+
+                jsonGraphArray.add(jsonGraphObj);
+            }
+        }
         // This is the coreference link graph
         // Each chain stores a set of mentions that link to each other,
         // along with a method for getting the most representative mention
@@ -242,14 +254,21 @@ public class AnalyticsProcessor {
 //                document.get(CorefCoreAnnotations.CorefChainAnnotation.class);
 //
 //        System.out.println(graph.toString());
+
+        try {
+
+            FileWriter file = new FileWriter(outFileName);
+            file.write(jsonGraphArray.toJSONString());
+            file.flush();
+            file.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String args[]) {
-        String text = "Barack Obama delivered a speech at UCSD.";
-
         AnalyticsProcessor ap = new AnalyticsProcessor();
-
-
-        ap.build(text);
+        ap.build();
     }
 }
