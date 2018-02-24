@@ -1,1 +1,119 @@
-[{"SourceNode":[{"NodeID":"Barack Obama","MetaInfo":{"NERLabel":"PERSON","Qualifier":"[]"}}],"TargetNode":[{"NodeID":"UCSD","MetaInfo":{"NERLabel":"ORGANIZATION","Qualifier":"[]"}}],"ID":{"SentenceID":1,"DocumentID":"5718137557"},"Relation: ":"deliver"},{"SourceNode":[{"NodeID":"Judiciary Senate Chuck Chairman Committee Grassley","MetaInfo":{"NERLabel":"PERSON","Qualifier":"[R., (, ,, Iowa, )]"}},{"NodeID":"lawyer","MetaInfo":{"NERLabel":"O","Qualifier":"[D., Calif., ), (, ,]"}},{"NodeID":"Dianne Sen. Feinstein","MetaInfo":{"NERLabel":"PERSON","Qualifier":"[]"}}],"TargetNode":[{"NodeID":"letter","MetaInfo":{"NERLabel":"O","Qualifier":"[]"}}],"ID":{"SentenceID":1,"DocumentID":"5718329204"},"Relation: ":"write"},{"SourceNode":[{"NodeID":"He","MetaInfo":{"NERLabel":"O","Qualifier":"[]"}}],"TargetNode":[{"NodeID":"majority Senate leader","MetaInfo":{"NERLabel":"O","Qualifier":"[McConnell, Mitch]"}}],"ID":{"SentenceID":1,"DocumentID":"5718340057"},"Relation: ":"feud"},{"SourceNode":[{"NodeID":"Dave Camp","MetaInfo":{"NERLabel":"PERSON","Qualifier":"[]"}},{"NodeID":"Paul Ryan","MetaInfo":{"NERLabel":"PERSON","Qualifier":"[]"}},{"NodeID":"Kevin Brady","MetaInfo":{"NERLabel":"PERSON","Qualifier":"[]"}}],"TargetNode":[{"NodeID":"moment","MetaInfo":{"NERLabel":"O","Qualifier":"[]"}},{"NodeID":"years","MetaInfo":{"NERLabel":"DURATION","Qualifier":"[]"}}],"ID":{"SentenceID":1,"DocumentID":"5718388510"},"Relation: ":"persist"}]
+[{
+	"SourceNode": [{
+		"NodeID": "Barack Obama",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "UCSD",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718137557"
+	},
+	"Relation": "deliver"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Judiciary Senate Chuck Chairman Committee Grassley",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R., (, ,, Iowa, )]"
+		}
+	},
+	{
+		"NodeID": "lawyer",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[D., Calif., ), (, ,]"
+		}
+	},
+	{
+		"NodeID": "Dianne Sen. Feinstein",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "letter",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "write"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "majority Senate leader",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[McConnell, Mitch]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "feud"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Dave Camp",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Paul Ryan",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Kevin Brady",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "moment",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "years",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "persist"
+}]

@@ -29,8 +29,8 @@ public class AnalyticsProcessor {
     StanfordCoreNLP pipeline;
     ArrayList<NewsArticles> newsArticles;
     JSONArray jsonGraphArray = new JSONArray();
-    String inFileName = "data/json/graphbuilder/test1.json";
-    String outFileName = "data/json/graphbuilder/test1graph.json";
+    String inFileName = "data/json/articles/caliNewsPaper_senate_sample.json";
+    String outFileName = "data/json/articles/caliNewsPaper_senate_sample_graph.json";
 
     private class NewsArticles   {
         String newsArticle;

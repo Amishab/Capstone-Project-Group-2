@@ -1,0 +1,10969 @@
+[{
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718137557"
+	},
+	"Relation": "WASHINGTON"
+},
+{
+	"SourceNode": [{
+		"NodeID": "senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718137557"
+	},
+	"Relation": "urge"
+},
+{
+	"SourceNode": [{
+		"NodeID": "senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718137557"
+	},
+	"Relation": "write"
+},
+{
+	"SourceNode": [{
+		"NodeID": "We",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718137557"
+	},
+	"Relation": "urge"
+},
+{
+	"TargetNode": [{
+		"NodeID": "Bernard Sanders",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[I-VT, (, )]"
+		}
+	},
+	{
+		"NodeID": "Senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[D-NH, (, )]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718137557"
+	},
+	"Relation": "co-sign"
+},
+{
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718137557"
+	},
+	"Relation": "read"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ron Sen. Wyden",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-Ore.]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Capitol Hill",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "leave"
+},
+{
+	"SourceNode": [{
+		"NodeID": "legislation",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Congress",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "carry"
+},
+{
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "Applewhite"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "House Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Capitol",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "head"
+},
+{
+	"SourceNode": [{
+		"NodeID": "GOP opponents",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "most",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "package",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "business",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "go"
+},
+{
+	"SourceNode": [{
+		"NodeID": "bills",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "percent",
+		"MetaInfo": {
+			"NERLabel": "PERCENT",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "slash"
+},
+{
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "reduce"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Democrats",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "call"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Jeb Rep. Hensarling",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Texas]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Lloyd Rep. Doggett",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-Texas]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "it",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "work"
+},
+{
+	"SourceNode": [{
+		"NodeID": "All",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "life preserver",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "months",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "grab"
+},
+{
+	"SourceNode": [{
+		"NodeID": "leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Christmas",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "hand Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "anxious"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ron Sen. Johnson",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Wednesday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "become"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Advertisement Johnson",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "complain"
+},
+{
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "partnership"
+},
+{
+	"SourceNode": [{
+		"NodeID": "owners",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "owe"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "approve"
+},
+{
+	"SourceNode": [{
+		"NodeID": "that",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "opposition",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "mean"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Bob Corker",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Susan Sens. Johnson Collins",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[Republican]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Collins",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "express"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Budget Congressional Office",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "project"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "elimination",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "unhappy"
+},
+{
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "save"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Orrin Chairman Committee Finance Senate Hatch",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Utah]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "use"
+},
+{
+	"SourceNode": [{
+		"NodeID": "provision",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "2026",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "end"
+},
+{
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "design"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Legislation",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "years",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "boost"
+},
+{
+	"SourceNode": [{
+		"NodeID": "numbers Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "lack"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Finance Senate panel",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "track"
+},
+{
+	"SourceNode": [{
+		"NodeID": "group",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 34,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "rebel"
+},
+{
+	"SourceNode": [{
+		"NodeID": "numbers",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 35,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "seem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "I",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 36,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "think"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House measure",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 37,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "collapse"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Senate",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 38,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "bills",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "$",
+		"MetaInfo": {
+			"NERLabel": "MONEY",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "individuals",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 39,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "double"
+},
+{
+	"SourceNode": [{
+		"NodeID": "plan",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 40,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "erase"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "500,000",
+		"MetaInfo": {
+			"NERLabel": "MONEY",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 41,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "limit"
+},
+{
+	"SourceNode": [{
+		"NodeID": "measure",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 42,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "repeal"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House measure",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 43,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "reduce"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Associated Press",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "report",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 44,
+		"DocumentID": "5718329204"
+	},
+	"Relation": "contribute"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Orrin Chairman Committee Finance Senate Hatch",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-Del., R-Utah, center, talks, Coons]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "leave"
+},
+{
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "Applewhite"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Marco Sen. Rubio",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Fla.]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "holdout"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Twitter Friday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "morning",
+		"MetaInfo": {
+			"NERLabel": "TIME",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "write"
+},
+{
+	"TargetNode": [{
+		"NodeID": "D.C",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "forget"
+},
+{
+	"SourceNode": [{
+		"NodeID": "We",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "need"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "White House",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "package",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "tax cuts",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "corporations",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Americans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "give"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "I",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "think"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Members",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Friday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "sign"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "work"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Devin Rep. Nunes",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Calif., member, a, committee]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "defection",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "push"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Senate Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "vote",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "pass"
+},
+{
+	"TargetNode": [{
+		"NodeID": "support",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "approve"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Senate turmoil",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "erupt"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Members",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "predict"
+},
+{
+	"SourceNode": [{
+		"NodeID": "turns",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "come"
+},
+{
+	"SourceNode": [{
+		"NodeID": "leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "week",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "predict"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "White House",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Thursday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "guy"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Advertisement",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "1,000 $",
+		"MetaInfo": {
+			"NERLabel": "MONEY",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "double"
+},
+{
+	"SourceNode": [{
+		"NodeID": "bill",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "make"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "form",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "receive"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Rubio",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "want"
+},
+{
+	"SourceNode": [{
+		"NodeID": "I",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "changes",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "conscience support",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "not"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Rubio",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Rubio",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "debate",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "propose"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "propose"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Rubio",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "news story",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "days",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "tweet"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "freak"
+},
+{
+	"ID": {
+		"SentenceID": 34,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "now"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Rubio",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 35,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "tweet"
+},
+{
+	"ID": {
+		"SentenceID": 36,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "slash"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Senate",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "House bills",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "percent",
+		"MetaInfo": {
+			"NERLabel": "PERCENT",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 37,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "set"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Rob Sen. Portman",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Ohio]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 38,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House GOP negotiators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 39,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "propose"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Portman",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 40,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Portman",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 41,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "we",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 42,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "celebrate"
+},
+{
+	"SourceNode": [{
+		"NodeID": "opposition",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "two",
+		"MetaInfo": {
+			"NERLabel": "NUMBER",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "time",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 43,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "come"
+},
+{
+	"SourceNode": [{
+		"NodeID": "John McCain",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 44,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "hospital"
+},
+{
+	"SourceNode": [{
+		"NodeID": "GOP leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 45,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "hopeful"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Zeke Miller",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Kevin writers Press Associated Freking",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "report",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 46,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "contribute"
+},
+{
+	"TargetNode": [{
+		"NodeID": "http:\/\/twitter.com\/stephenatap",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 47,
+		"DocumentID": "5718340057"
+	},
+	"Relation": "follow"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ala.",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "BILL BARROW",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "CHANDLER KIM HOMEWOOD",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "dollars",
+		"MetaInfo": {
+			"NERLabel": "MONEY",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "back"
+},
+{
+	"SourceNode": [{
+		"NodeID": "victory",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "temporary miscalculation embarrassment",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "rank"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Kentucky Republican",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "struggle"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "fights",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "week",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "fail"
+},
+{
+	"SourceNode": [{
+		"NodeID": "McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "face"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Moore",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[judge, the, famed, ,, \u201C, Ten, Commandments, \u201D, removed]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "nomination",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Washington leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "declare"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "state Chris lawmaker McDaniel",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Mississippi",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "call"
+},
+{
+	"SourceNode": [{
+		"NodeID": "McDaniel",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "tell"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Moore",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "close"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Moore",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "tweet"
+},
+{
+	"SourceNode": [{
+		"NodeID": "&",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "run"
+},
+{
+	"TargetNode": [{
+		"NodeID": "Dec",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "WIN"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "White House",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "explanation",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "respond"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Wednesday morning",
+		"MetaInfo": {
+			"NERLabel": "TIME",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "send"
+},
+{
+	"TargetNode": [{
+		"NodeID": "Roy Moore",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "night",
+		"MetaInfo": {
+			"NERLabel": "TIME",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "time",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "Spoke"
+},
+{
+	"SourceNode": [{
+		"NodeID": "tweet",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Leadership Senate Fund",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[committee, a, McConnell-aligned, political, action]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "pledge"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Moore",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Point West graduate",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Vietnam veteran",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Doug Democrat Jones",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "favorite"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "reconcile"
+},
+{
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "fact"
+},
+{
+	"SourceNode": [{
+		"NodeID": "choice",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "campaign architect",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "leave"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Bannon",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "cast"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Who",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "sovereign"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Bannon",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "McDaniel",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "McDaniel",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"TargetNode": [{
+		"NodeID": "instance",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "give"
+},
+{
+	"SourceNode": [{
+		"NodeID": "it",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "worth"
+},
+{
+	"SourceNode": [{
+		"NodeID": "fallout",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "core supporters",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "cement"
+},
+{
+	"SourceNode": [{
+		"NodeID": "warnings",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "ranks",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Whit pollster Ayres",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ayres",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 34,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ayres",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Strange",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 35,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "note"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ayres",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 36,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "defeat",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "effort",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 37,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "proud"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Strange",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 38,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "seas",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "winds",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 39,
+		"DocumentID": "5718388510"
+	},
+	"Relation": "hard"
+},
+{
+	"SourceNode": [{
+		"NodeID": "drive",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "die"
+},
+{
+	"SourceNode": [{
+		"NodeID": "AP Photo\/Robert F.",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "decision",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "party leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "leave"
+},
+{
+	"SourceNode": [{
+		"NodeID": "John Sen. Dakota South Thune",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[leader, Senate, the, No., GOP]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Monday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "call"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Orrin Sen. Hatch",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Utah]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "collapse",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "mark"
+},
+{
+	"SourceNode": [{
+		"NodeID": "GOP",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "make"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "need"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Collins",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "tell"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mitch Leader Majority Senate McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Ky.]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "reversal",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "decide"
+},
+{
+	"SourceNode": [{
+		"NodeID": "votes",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "doom"
+},
+{
+	"SourceNode": [{
+		"NodeID": "John Sens. GOP McCain",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Rand Paul",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Ted Cruz",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Lisa Sen. Murkowski",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Alaska]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "remain"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Murkowski",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "This",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "week"
+},
+{
+	"SourceNode": [{
+		"NodeID": "protections",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Sunday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "filibuster",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[delays, that, lack, bill-killing]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "expire"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "measure",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Bill Sens. GOP Cassidy",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "pin"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "end"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Advertisement Collins",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "announce"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Maine",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "statement",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "changes",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "GOP leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "times",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "revise"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "give"
+},
+{
+	"SourceNode": [{
+		"NodeID": "protesters",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "issue",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "delay",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "force"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Police",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "hearing room",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "lug"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Monday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "take"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "radio talk program",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "call"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Cassidy",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Graham",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Finance committee",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "defend"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Graham",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "tell"
+},
+{
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "work"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mazie Sen. Hirono",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-Hawaii, who, learned, ,]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "testify"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Laurie Kellman",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Ken Thomas",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Julie chief bureau Washington Press Associated Pace",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Erica Werner",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Andrew writers Taylor",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Richard Lardner",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "report",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718384505"
+	},
+	"Relation": "contribute"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "WERNER ERICA WASHINGTON",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "comments",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "antipathy",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "gun regulations",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "mark"
+},
+{
+	"SourceNode": [{
+		"NodeID": "they",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "guarantee",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Dianne Sen. Feinstein",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-Calif.]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "legislation"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Cornyn",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "tell"
+},
+{
+	"SourceNode": [{
+		"NodeID": "I",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "own"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Cornyn",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "devices",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "legal"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "shoulder-stock assembly",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "rifle",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "office",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "fit"
+},
+{
+	"SourceNode": [{
+		"NodeID": "government",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "give"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Feinstein",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "author"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Chuck Leader Minority Senate Schumer",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "urge"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Feinstein",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "public",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "week",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "plead"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Feinstein",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "we",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "keep"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Rifle National Association",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "bill",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "inquiries",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "respond"
+},
+{
+	"SourceNode": [{
+		"NodeID": "senator",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[Johnson, Ron, Wisconsin]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "John Sen. Thune",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Ky.]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ryan",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Wis.]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "radio interview",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Milwaukee",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Wednesday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "make"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ryan",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "people",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "go"
+},
+{
+	"SourceNode": [{
+		"NodeID": "David Rep. Cicilline",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-R.I.]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "House",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "introduce"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Dina Rep. Titus",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-Nev.]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "need"
+},
+{
+	"SourceNode": [{
+		"NodeID": "history",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "give"
+},
+{
+	"SourceNode": [{
+		"NodeID": "ban",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Hook Sandy shooting",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "go"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Democrats",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "mass shooting",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "year",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "commandeer"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Shooting incidents",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "change"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Feinstein",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "hold"
+},
+{
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "go"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Donald President Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "visit"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Associated ___ Matthew writer Press Daly",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 34,
+		"DocumentID": "5718395056"
+	},
+	"Relation": "contribute"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Excerpts",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "development program",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[terrorism, perpetrated]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "face"
+},
+{
+	"SourceNode": [{
+		"NodeID": "U.N.",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "able"
+},
+{
+	"SourceNode": [{
+		"NodeID": "session",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "start"
+},
+{
+	"SourceNode": [{
+		"NodeID": "One",
+		"MetaInfo": {
+			"NERLabel": "NUMBER",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "reform"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Antonio General Secretary U.N. Guterres",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "remarks",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "emphasize"
+},
+{
+	"SourceNode": [{
+		"NodeID": "and",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "to",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "strengthen"
+},
+{
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "produce"
+},
+{
+	"SourceNode": [{
+		"NodeID": "focus",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "approach"
+},
+{
+	"TargetNode": [{
+		"NodeID": "Monday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "hold"
+},
+{
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "expect"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "champion"
+},
+{
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "determine"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "express"
+},
+{
+	"SourceNode": [{
+		"NodeID": "U.N. budget",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "years",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "double"
+},
+{
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "cut"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "necessary"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "easy"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "seem"
+},
+{
+	"TargetNode": [{
+		"NodeID": "percent",
+		"MetaInfo": {
+			"NERLabel": "PERCENT",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "slash"
+},
+{
+	"SourceNode": [{
+		"NodeID": "efforts",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "successful"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Japan",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "U.N. budget",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "contributor"
+},
+{
+	"SourceNode": [{
+		"NodeID": "percent share",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "mean"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "vital"
+},
+{
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "issue"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Japan",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "member",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "play"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Japan",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "continue"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "debate",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "addresses",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "lay"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "hold"
+},
+{
+	"SourceNode": [{
+		"NodeID": "it",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "tension",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "important"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Online",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "itch"
+},
+{
+	"SourceNode": [{
+		"NodeID": "longtime",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "allow"
+},
+{
+	"SourceNode": [{
+		"NodeID": "idea",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "incentive",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "work"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mr. McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 34,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "tell"
+},
+{
+	"SourceNode": [{
+		"NodeID": "years",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 35,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "make"
+},
+{
+	"ID": {
+		"SentenceID": 36,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "implore"
+},
+{
+	"SourceNode": [{
+		"NodeID": "appointment",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 37,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "responsibility"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 38,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "expect"
+},
+{
+	"SourceNode": [{
+		"NodeID": "it",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 39,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Patrick Senator Leahy",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[veteran, the, Democrat, and, chairman, chairman, Committee]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "exception",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 40,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "apply"
+},
+{
+	"SourceNode": [{
+		"NodeID": "senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 41,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "exploit"
+},
+{
+	"SourceNode": [{
+		"NodeID": "senator",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 42,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "block"
+},
+{
+	"SourceNode": [{
+		"NodeID": "senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 43,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "block"
+},
+{
+	"TargetNode": [{
+		"NodeID": "all",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "six",
+		"MetaInfo": {
+			"NERLabel": "NUMBER",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 44,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "scuttle"
+},
+{
+	"SourceNode": [{
+		"NodeID": "That",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 45,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "count"
+},
+{
+	"SourceNode": [{
+		"NodeID": "abuse",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 46,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "slip"
+},
+{
+	"SourceNode": [{
+		"NodeID": "President Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 47,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "it",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 48,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "rich"
+},
+{
+	"SourceNode": [{
+		"NodeID": "What",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "this",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 49,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "lead"
+},
+{
+	"SourceNode": [{
+		"NodeID": "behavior",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "impunity",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 50,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "engage"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Al Senator Franken",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[Democrat, Minnesota]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "month",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 51,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "refuse"
+},
+{
+	"SourceNode": [{
+		"NodeID": "senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[Wyden, Ron, and, Merkley, Merkley, Jeff]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "week",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 52,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "oppose"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Democrats",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "opposition",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "counterparts",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 53,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "provide"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mr. Wyden",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Mr. Merkley",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 54,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "These",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 55,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "complaint"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Constitution",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 56,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "give"
+},
+{
+	"SourceNode": [{
+		"NodeID": "blue-slip tradition",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "era",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 57,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "help"
+},
+{
+	"SourceNode": [{
+		"NodeID": "way",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "age",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 58,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "that",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 59,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "matter"
+},
+{
+	"SourceNode": [{
+		"NodeID": "president",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 60,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "take"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mr. Obama",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "states",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 61,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "make"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mr. Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "advocacy groups",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Heritage Foundation",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Federalist Society",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "contrast",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 62,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "farm"
+},
+{
+	"SourceNode": [{
+		"NodeID": "push",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 63,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "politicize"
+},
+{
+	"SourceNode": [{
+		"NodeID": "slip",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 64,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "answer"
+},
+{
+	"SourceNode": [{
+		"NodeID": "senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Senate floor",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 65,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "state"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Democrats",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "years",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 66,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 67,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "remember"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Online",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "it",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "hours",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 68,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "look"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Minority Senate E. Charles Leader Schumer",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Nancy Leader Minority House Pelosi",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "dinner",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 69,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "announce"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Democrats",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "part",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 70,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "support"
+},
+{
+	"SourceNode": [{
+		"NodeID": "moment",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 71,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "last"
+},
+{
+	"SourceNode": [{
+		"NodeID": "White House",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 72,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "respond"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Thursday morning",
+		"MetaInfo": {
+			"NERLabel": "TIME",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 73,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "seem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 74,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Thursday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "afternoon",
+		"MetaInfo": {
+			"NERLabel": "TIME",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "DACA deal",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 75,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "talk"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 76,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "outrageous"
+},
+{
+	"SourceNode": [{
+		"NodeID": "decision",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 77,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "cruel"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Dreamers",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 78,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "shape"
+},
+{
+	"SourceNode": [{
+		"NodeID": "flurry",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 79,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "raise"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Dream Act",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 80,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "provide"
+},
+{
+	"SourceNode": [{
+		"NodeID": "it",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 81,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "pass"
+},
+{
+	"SourceNode": [{
+		"NodeID": "That",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 82,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "lead"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "White House",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 83,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "ride"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "while",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 84,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "soften"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "month",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 85,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "announce"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Dreamers",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "wind",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 86,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "twist"
+},
+{
+	"SourceNode": [{
+		"NodeID": "We",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 87,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "hope"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Fairness",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 88,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "demand"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Dreamers",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "citizenship",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 89,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "deserve"
+},
+{
+	"SourceNode": [{
+		"NodeID": "These",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 90,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "people"
+},
+{
+	"SourceNode": [{
+		"NodeID": "they",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 91,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 92,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "set"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Americans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Online",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "much",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 93,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "debate"
+},
+{
+	"ID": {
+		"SentenceID": 94,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "balance"
+},
+{
+	"ID": {
+		"SentenceID": 95,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "punish"
+},
+{
+	"ID": {
+		"SentenceID": 96,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "make"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Obama administration",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 97,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "urge"
+},
+{
+	"SourceNode": [{
+		"NodeID": "guideline",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 98,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "remind"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 99,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "prompt"
+},
+{
+	"SourceNode": [{
+		"NodeID": "crackdown",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "students",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "families",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 100,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "generate"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Betsy Secretary Education DeVos",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 101,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "signal"
+},
+{
+	"SourceNode": [{
+		"NodeID": "DeVos",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "speech",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 102,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "reality",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 103,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 104,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "add"
+},
+{
+	"SourceNode": [{
+		"NodeID": "DeVos",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 105,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "change"
+},
+{
+	"ID": {
+		"SentenceID": 106,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "unclear"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 107,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "DeVos",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "basis",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "speech",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "groups",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 108,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "mention"
+},
+{
+	"SourceNode": [{
+		"NodeID": "We",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 109,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "have"
+},
+{
+	"ID": {
+		"SentenceID": 110,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "let"
+},
+{
+	"SourceNode": [{
+		"NodeID": "That",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 111,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "enforcement Law authorities",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "colleges",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 112,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 113,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "widespread"
+},
+{
+	"SourceNode": [{
+		"NodeID": "percent",
+		"MetaInfo": {
+			"NERLabel": "PERCENT",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 114,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "women",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 115,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "college administrators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[forces, security, members, and, forces, cases, faculty]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 116,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "shove"
+},
+{
+	"ID": {
+		"SentenceID": 117,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "interview"
+},
+{
+	"SourceNode": [{
+		"NodeID": "college authorities",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "years",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 118,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "mishandle"
+},
+{
+	"ID": {
+		"SentenceID": 119,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "reason"
+},
+{
+	"SourceNode": [{
+		"NodeID": "enforcement Law authorities",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 120,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "approach"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Campus administrators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 121,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "ill-prepared"
+},
+{
+	"ID": {
+		"SentenceID": 122,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "prosecution"
+},
+{
+	"ID": {
+		"SentenceID": 123,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "involve"
+},
+{
+	"SourceNode": [{
+		"NodeID": "victims",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 124,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "decline"
+},
+{
+	"ID": {
+		"SentenceID": 125,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "accustom"
+},
+{
+	"SourceNode": [{
+		"NodeID": "DeVos",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 126,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Where",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 127,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "do"
+},
+{
+	"ID": {
+		"SentenceID": 128,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "do"
+},
+{
+	"ID": {
+		"SentenceID": 129,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "leave"
+},
+{
+	"SourceNode": [{
+		"NodeID": "That",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 130,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "question"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Washington",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 131,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Colleague Dear letter",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 132,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "need"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 133,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "paragraph"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 134,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "instruct"
+},
+{
+	"TargetNode": [{
+		"NodeID": "cases",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "professionals",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 135,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "hand"
+},
+{
+	"ID": {
+		"SentenceID": 136,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "let"
+},
+{
+	"TargetNode": [{
+		"NodeID": "shooting death",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 137,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "acquit"
+},
+{
+	"SourceNode": [{
+		"NodeID": "decision",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 138,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Police Louis St. Department",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "contrast",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "responses",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 139,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "handle"
+},
+{
+	"SourceNode": [{
+		"NodeID": "protesters",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "time",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 140,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "get"
+},
+{
+	"SourceNode": [{
+		"NodeID": "officers",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 141,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "employ"
+},
+{
+	"SourceNode": [{
+		"NodeID": "police",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "locations",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 142,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "block"
+},
+{
+	"SourceNode": [{
+		"NodeID": "line",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 143,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "protesters",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 144,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "they",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 145,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "rationalize"
+},
+{
+	"ID": {
+		"SentenceID": 146,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "elect"
+},
+{
+	"SourceNode": [{
+		"NodeID": "act",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 147,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "she",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Friday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 148,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "state"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "verdict",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 149,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "share"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Krewson",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "share",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 150,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "suffer"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "carjacking",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "alderman",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "shooting death",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 151,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "enter"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Krewson",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "children",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 152,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "present"
+},
+{
+	"SourceNode": [{
+		"NodeID": "sense",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "what",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 153,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "do"
+},
+{
+	"SourceNode": [{
+		"NodeID": "interior",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "attack",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 154,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "message",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 155,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "what"
+},
+{
+	"SourceNode": [{
+		"NodeID": "themselves",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 156,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "attack"
+},
+{
+	"SourceNode": [{
+		"NodeID": "one",
+		"MetaInfo": {
+			"NERLabel": "NUMBER",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 157,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "rest"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Stockley",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "day",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "court",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 158,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "get"
+},
+{
+	"SourceNode": [{
+		"NodeID": "statement",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "elements",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 159,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "one"
+},
+{
+	"ID": {
+		"SentenceID": 160,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "undo"
+},
+{
+	"SourceNode": [{
+		"NodeID": "justice",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 161,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "inflict"
+},
+{
+	"ID": {
+		"SentenceID": 162,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "Online"
+},
+{
+	"SourceNode": [{
+		"NodeID": "One",
+		"MetaInfo": {
+			"NERLabel": "NUMBER",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "impact",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 163,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "nation",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 164,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "need"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 165,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "tweet"
+},
+{
+	"ID": {
+		"SentenceID": 166,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "go"
+},
+{
+	"SourceNode": [{
+		"NodeID": "No",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[Congress]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 167,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "slow"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Tax cuts",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 168,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "go"
+},
+{
+	"SourceNode": [{
+		"NodeID": "tax reform",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 169,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "take"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 170,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "promise"
+},
+{
+	"SourceNode": [{
+		"NodeID": "president",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 171,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "want"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 172,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "point"
+},
+{
+	"TargetNode": [{
+		"NodeID": "Midwest",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 173,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "bring"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 174,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "create"
+},
+{
+	"SourceNode": [{
+		"NodeID": "studies",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "fact",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 175,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "suggest"
+},
+{
+	"SourceNode": [{
+		"NodeID": "rhetoric",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "brackets percent",
+		"MetaInfo": {
+			"NERLabel": "PERCENT",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "odds",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 176,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "regard"
+},
+{
+	"SourceNode": [{
+		"NodeID": "president",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "trip",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Florida",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "week",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 177,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Policy Tax Institution Institute-Brookings Urban Center",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 178,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "estimate"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Income inequality",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "country",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 179,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "issue"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 180,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "push"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 181,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "love"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Joint Committee",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 182,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "This",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "wealthy",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[class, not, the, middle]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 183,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "break"
+},
+{
+	"SourceNode": [{
+		"NodeID": "negotiators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 184,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "struggle"
+},
+{
+	"SourceNode": [{
+		"NodeID": "notion",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 185,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "fantasy"
+},
+{
+	"SourceNode": [{
+		"NodeID": "reason",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 186,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "nation",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 187,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "use"
+},
+{
+	"ID": {
+		"SentenceID": 188,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "wealthy",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 189,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "cut"
+},
+{
+	"ID": {
+		"SentenceID": 190,
+		"DocumentID": "5718205204"
+	},
+	"Relation": "Online"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House White officials",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Thursday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House White officials",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "say"
+},
+{
+	"TargetNode": [{
+		"NodeID": "decision",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "schedule"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House White officials",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "officials",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "condition",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "speak"
+},
+{
+	"SourceNode": [{
+		"NodeID": "officials",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump Republican lawmakers",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "vote",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "week",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "delivery",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "hope"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "afford"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House White officials",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "John Sens. Republican McCain",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "health issues",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "miss"
+},
+{
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "force"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Aides",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "week",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Abbas",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "host Pence",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[Christian, a, devout]"
+		}
+	},
+	{
+		"NodeID": "Bank West town",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "plan"
+},
+{
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "schedule"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Pence",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "visit",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Israel",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "arrive"
+},
+{
+	"SourceNode": [{
+		"NodeID": "vice president",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Benjamin Minister Prime Israeli Netanyahu",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Thursday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "meet"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House White officials",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "say"
+},
+{
+	"TargetNode": [{
+		"NodeID": "siding",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Israel",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "perceive"
+},
+{
+	"SourceNode": [{
+		"NodeID": "decision",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "upend"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "resolution",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "boundaries",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "take"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "set"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump other Kushner aides",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "region",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "travel"
+},
+{
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "schedule"
+},
+{
+	"TargetNode": [{
+		"NodeID": "Twitter",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718339870"
+	},
+	"Relation": "follow"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mitch Leader Majority Senate McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "look"
+},
+{
+	"SourceNode": [{
+		"NodeID": "McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "2017",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "opt"
+},
+{
+	"SourceNode": [{
+		"NodeID": "cracks",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "AP",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "refuse"
+},
+{
+	"SourceNode": [{
+		"NodeID": "administration",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "pursue"
+},
+{
+	"SourceNode": [{
+		"NodeID": "jobs",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Department",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "scores",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "general"
+},
+{
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "seem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "bonanza",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "corruption",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "recipe"
+},
+{
+	"SourceNode": [{
+		"NodeID": "that",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "president",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "make"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Rick Blum",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[director, Media]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "say"
+},
+{
+	"TargetNode": [{
+		"NodeID": "institutions",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "frustrate"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "go"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "enemies",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "media",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "branding",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "back"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "call"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "tweet"
+},
+{
+	"SourceNode": [{
+		"NodeID": "slate",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "seem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "let"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Secretary Education Betsy DeVos",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "give"
+},
+{
+	"SourceNode": [{
+		"NodeID": "record",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "campaign vow",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "administration",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "serve"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Advertisement",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "say"
+},
+{
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "drain"
+},
+{
+	"SourceNode": [{
+		"NodeID": "floods",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "swamp"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Members",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "resist"
+},
+{
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "declare"
+},
+{
+	"SourceNode": [{
+		"NodeID": "administration",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "trip",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "July",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "insist"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "officials",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "House White meeting",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "bar"
+},
+{
+	"SourceNode": [{
+		"NodeID": "signs",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "public fight",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "conflicts",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "include"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Shaub",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[appointee, Obama, leaving, an]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "try"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Justice Department",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "administrations",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "issue"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House White spokeswoman",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "respond"
+},
+{
+	"SourceNode": [{
+		"NodeID": "J. Daniel Metcalfe",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[director, the, founding, Office, who, teaches]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "core supporters",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "seem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 34,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "House"
+},
+{
+	"ID": {
+		"SentenceID": 35,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "televise"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Senate leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "year",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 36,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "try"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mitch leader Majority Senate McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 37,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "opt"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Closing beginning",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 38,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "unusual"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Press Associated analysis",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "year",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 39,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "show"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Obama administration",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "denial",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "files",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 40,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "set"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Obama",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "office",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 41,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "sign"
+},
+{
+	"SourceNode": [{
+		"NodeID": "directive",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "W. George President Bush",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 42,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "reverse"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Another",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 43,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "repeal"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Part",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "background",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 44,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "stem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "you",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 45,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "get"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Richard Painter",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 46,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "age",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 47,
+		"DocumentID": "5718377962"
+	},
+	"Relation": "job"
+},
+{
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "WASHINGTON"
+},
+{
+	"SourceNode": [{
+		"NodeID": "John Sen. Dakota South Thune",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[leader, No., GOP, Senate, the]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Monday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "call"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Orrin Sen. Hatch",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Utah]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "collapse",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "mark"
+},
+{
+	"SourceNode": [{
+		"NodeID": "GOP",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "make"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "need"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Collins",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "tell"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Leader Majority Senate Mitch McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Ky.]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "reversal",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "decide"
+},
+{
+	"SourceNode": [{
+		"NodeID": "votes",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "doom"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ted Cruz",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "John Sens. GOP McCain",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Rand Paul",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Lisa Sen. Murkowski",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-Alaska]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "remain"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Murkowski",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "This",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "week"
+},
+{
+	"SourceNode": [{
+		"NodeID": "protections",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Sunday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "filibuster",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[delays, bill-killing, that, lack]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "expire"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Republicans",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Sens. GOP Bill Cassidy",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "measure",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "pin"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "end"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Collins",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "announce"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Maine",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "statement",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "changes",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "GOP leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "times",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "revise"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "give"
+},
+{
+	"SourceNode": [{
+		"NodeID": "protesters",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "issue",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "delay",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "force"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Police",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "hearing room",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "lug"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Monday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "take"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "radio talk program",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "call"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Cassidy",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Graham",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Finance committee",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "defend"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Graham",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "tell"
+},
+{
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "work"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mazie Sen. Hirono",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-Hawaii, ,, who, learned]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "testify"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Richard Lardner",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Laurie Kellman",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Ken Thomas",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Julie chief bureau Washington Press Associated Pace",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Erica Werner",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Andrew writers Taylor",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "report",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718388162"
+	},
+	"Relation": "contribute"
+},
+{
+	"SourceNode": [{
+		"NodeID": "cracks",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "LAURIE KELLMAN",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[WASHINGTON, Associated, Press, >>]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "refuse"
+},
+{
+	"SourceNode": [{
+		"NodeID": "administration",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "pursue"
+},
+{
+	"SourceNode": [{
+		"NodeID": "jobs",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Department",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "scores",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "general"
+},
+{
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "seem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "bonanza",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "corruption",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "recipe"
+},
+{
+	"SourceNode": [{
+		"NodeID": "that",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "president",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "make"
+},
+{
+	"TargetNode": [{
+		"NodeID": "public",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "access"
+},
+{
+	"TargetNode": [{
+		"NodeID": "institutions",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "frustrate"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "go"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "media",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "branding",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "enemies",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "back"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "call"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "tweet"
+},
+{
+	"SourceNode": [{
+		"NodeID": "slate",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "seem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "let"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Betsy Secretary Education DeVos",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "give"
+},
+{
+	"SourceNode": [{
+		"NodeID": "record",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "campaign vow",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "administration",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "serve"
+},
+{
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "Story"
+},
+{
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "drain"
+},
+{
+	"SourceNode": [{
+		"NodeID": "floods",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "swamp"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Members",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "resist"
+},
+{
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "declare"
+},
+{
+	"SourceNode": [{
+		"NodeID": "administration",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "trip",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "July",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "insist"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "House White meeting",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "officials",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "bar"
+},
+{
+	"SourceNode": [{
+		"NodeID": "signs",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "conflicts",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "public fight",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "include"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Shaub",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[appointee, an, Obama, leaving]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "try"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Justice Department",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "administrations",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "issue"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House White spokeswoman",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "respond"
+},
+{
+	"SourceNode": [{
+		"NodeID": "J. Daniel Metcalfe",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[director, who, teaches, the, founding, Office]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "core supporters",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "seem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "It",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "House"
+},
+{
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "televise"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Senate leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "year",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 34,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "try"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mitch leader Majority Senate McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 35,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "opt"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Closing beginning",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 36,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "unusual"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Press Associated analysis",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "year",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 37,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "show"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Obama administration",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "denial",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "files",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 38,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "set"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Obama",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "office",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 39,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "sign"
+},
+{
+	"SourceNode": [{
+		"NodeID": "directive",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "W. George President Bush",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 40,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "reverse"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Another",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 41,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "repeal"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Part",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "background",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 42,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "stem"
+},
+{
+	"SourceNode": [{
+		"NodeID": "you",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 43,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "get"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Richard Painter",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 44,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "age",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 45,
+		"DocumentID": "5718483236"
+	},
+	"Relation": "job"
+},
+{
+	"TargetNode": [{
+		"NodeID": "FRAM ALAN WASHINGTON",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "guess"
+},
+{
+	"SourceNode": [{
+		"NodeID": "choir",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "turn"
+},
+{
+	"SourceNode": [{
+		"NodeID": "That",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Donald President Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "view"
+},
+{
+	"SourceNode": [{
+		"NodeID": "it",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "true"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "day",
+		"MetaInfo": {
+			"NERLabel": "DURATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "make"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "lack"
+},
+{
+	"SourceNode": [{
+		"NodeID": "aides",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "confirm"
+},
+{
+	"SourceNode": [{
+		"NodeID": "That",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Arizona",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "McCain"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Twitter",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "cite"
+},
+{
+	"SourceNode": [{
+		"NodeID": "He",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "add"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Murkowski",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "bill",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "take"
+},
+{
+	"SourceNode": [{
+		"NodeID": "She",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "criticize"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Mike President Vice tie Pence",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "break"
+},
+{
+	"SourceNode": [{
+		"NodeID": "John Sen. Dakota South Thune",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[leader, chamber, No., 3, GOP]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "That",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "big"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Bill Sen. Cassidy",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[R-La., ,, sponsor]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "We",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "see"
+},
+{
+	"SourceNode": [{
+		"NodeID": "We",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "We",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "tell"
+},
+{
+	"SourceNode": [{
+		"NodeID": "House White aides",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "That",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "news",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Cochran",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "come"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Thanks",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "tweet"
+},
+{
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "hospitalize"
+},
+{
+	"SourceNode": [{
+		"NodeID": "aides",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "bill"
+},
+{
+	"SourceNode": [{
+		"NodeID": "programs",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "grants block states",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "collapse"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "success",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "offer"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "start"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "opposition",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "need"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Chuck Leader Minority Senate Schumer",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-N.Y.]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "interview",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 34,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Congress",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 35,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "vote"
+},
+{
+	"SourceNode": [{
+		"NodeID": "GOP leaders",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 36,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "talk"
+},
+{
+	"SourceNode": [{
+		"NodeID": "it",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 37,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "unclear"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 38,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "compromise",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 39,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "be"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Senate leader",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[Durbin, Richard, Illinois]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 40,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"TargetNode": [{
+		"NodeID": "funding",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 41,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "Block"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Durbin",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "bill",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 42,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"TargetNode": [{
+		"NodeID": "Medicaid",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 43,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "Cutbacks"
+},
+{
+	"TargetNode": [{
+		"NodeID": "health insurance",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 44,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "reduction"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Those",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 45,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "good"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 46,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "plans",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "prices",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 47,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "let"
+},
+{
+	"TargetNode": [{
+		"NodeID": "coverage",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "ideas",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 48,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "wary"
+},
+{
+	"SourceNode": [{
+		"NodeID": "I",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 49,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Ron Sen. Wyden",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[D-Ore]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 50,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Catherine writer Press Associated ___ Lucey",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 51,
+		"DocumentID": "5718388806"
+	},
+	"Relation": "contribute"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Donald President Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Sen. Bob Corker",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Correspondent Congressional AP WERNER ERICA WASHINGTON",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 1,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "lash"
+},
+{
+	"SourceNode": [{
+		"NodeID": "GOP Fellow senators",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Corker",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 2,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "avoid"
+},
+{
+	"SourceNode": [{
+		"NodeID": "lawmakers",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Capitol Hill",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 3,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "imperil"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 4,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "need"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Corker",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 5,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "figure"
+},
+{
+	"SourceNode": [{
+		"NodeID": "status",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 6,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "make"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Schelzig Photo\/Erik AP President",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[File]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "occasions",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 7,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "attack"
+},
+{
+	"SourceNode": [{
+		"NodeID": "president",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 8,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "cause"
+},
+{
+	"ID": {
+		"SentenceID": 9,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "ap"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Applewhite Scott Sen.",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[File, R-Wyo.]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Corker",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "office",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 10,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "disagree"
+},
+{
+	"ID": {
+		"SentenceID": 11,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "ap"
+},
+{
+	"ID": {
+		"SentenceID": 12,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "Rep."
+},
+{
+	"ID": {
+		"SentenceID": 13,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "criticize"
+},
+{
+	"ID": {
+		"SentenceID": 14,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "ap"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Applewhite Scott Senate",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[File]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 15,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "answer"
+},
+{
+	"SourceNode": [{
+		"NodeID": "office",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 16,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "say"
+},
+{
+	"ID": {
+		"SentenceID": 17,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "ap"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Roy Sen. Blunt",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[member, a, leadership]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Tuesday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 18,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "tell"
+},
+{
+	"SourceNode": [{
+		"NodeID": "I",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 19,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "encourage"
+},
+{
+	"SourceNode": [{
+		"NodeID": "comments",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "GOP Chuck Sen. Grassley",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Jefferson Iowa",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Monday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 20,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "follow"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Grassley",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 21,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "I",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 22,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "think"
+},
+{
+	"SourceNode": [{
+		"NodeID": "tweet",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Tuesday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 23,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "allege"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Corker",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 24,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "level"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Corker",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "interview",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 25,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "charge",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Tuesday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 26,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "respond"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 27,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "All",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 28,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "take"
+},
+{
+	"SourceNode": [{
+		"NodeID": "problem",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 29,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "see"
+},
+{
+	"SourceNode": [{
+		"NodeID": "We",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 30,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "path"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 31,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "dispute"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "response",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "question",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 32,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "I",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 33,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "think"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Twitter",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 34,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "take"
+},
+{
+	"SourceNode": [{
+		"NodeID": "office",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 35,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "decline"
+},
+{
+	"SourceNode": [{
+		"NodeID": "comments",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 36,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "echo"
+},
+{
+	"SourceNode": [{
+		"NodeID": "popularity",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "muzzle",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 37,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "serve"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Trump",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 38,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "have"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Tennessean",
+		"MetaInfo": {
+			"NERLabel": "MISC",
+			"Qualifier": "[Black, Rep., Diane]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "interview",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 39,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "They",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 40,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "get"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Black",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 41,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "failure",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 42,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "lead"
+},
+{
+	"SourceNode": [{
+		"NodeID": "McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Monday",
+		"MetaInfo": {
+			"NERLabel": "DATE",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Corker-Trump contretemps",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 43,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "respond"
+},
+{
+	"SourceNode": [{
+		"NodeID": "comments",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 44,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "underscore"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Former",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Corker",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "McConnell",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "others",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "interview",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 45,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "lash"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Bannon",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Fox News",
+		"MetaInfo": {
+			"NERLabel": "ORGANIZATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 46,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 47,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "say"
+},
+{
+	"SourceNode": [{
+		"NodeID": "he",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 48,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "resign"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Adam writers Press Associated Beam",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "report",
+		"MetaInfo": {
+			"NERLabel": "O",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Hazard Kentucky",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Bob Christie",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 49,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "contribute"
+},
+{
+	"SourceNode": [{
+		"NodeID": "Marcy Gordon",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Kevin Freking",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Alan Fram",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Andrew Taylor",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Matthew Daly",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	},
+	{
+		"NodeID": "Jill Colvin",
+		"MetaInfo": {
+			"NERLabel": "PERSON",
+			"Qualifier": "[]"
+		}
+	}],
+	"TargetNode": [{
+		"NodeID": "Washington",
+		"MetaInfo": {
+			"NERLabel": "LOCATION",
+			"Qualifier": "[]"
+		}
+	}],
+	"ID": {
+		"SentenceID": 50,
+		"DocumentID": "5718399946"
+	},
+	"Relation": "contribute"
+}]
