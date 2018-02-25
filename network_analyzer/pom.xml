@@ -42,5 +42,10 @@
             <version>1.1.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.neo4j.driver</groupId>
+            <artifactId>neo4j-java-driver</artifactId>
+            <version>1.5.0-beta01</version>
+        </dependency>
     </dependencies>
 </project>

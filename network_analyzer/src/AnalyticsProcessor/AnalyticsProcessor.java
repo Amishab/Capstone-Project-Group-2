@@ -19,7 +19,9 @@ import edu.stanford.nlp.util.Index;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.neo4j.driver.v1.*;
 
+import javax.xml.bind.SchemaOutputResolver;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -29,8 +31,9 @@ public class AnalyticsProcessor {
     StanfordCoreNLP pipeline;
     ArrayList<NewsArticles> newsArticles;
     JSONArray jsonGraphArray = new JSONArray();
-    String inFileName = "data/json/articles/caliNewsPaper_senate_sample.json";
-    String outFileName = "data/json/articles/caliNewsPaper_senate_sample_graph.json";
+    String inFileName = "data/json/graphbuilder/test1.json";
+    String outFileName = "data/json/graphbuilder/test1_graph2.json";
+    private final Driver neo4jDriver;
 
     private class NewsArticles   {
         String newsArticle;
@@ -46,12 +49,20 @@ public class AnalyticsProcessor {
     public AnalyticsProcessor()
     {
         Properties props = new Properties();
-        props.put("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
+        props.put("annotators", "tokenize, ssplit, pos, lemma, ner, parse");
         this.pipeline = new StanfordCoreNLP(props);
 
         this.newsArticles = new ArrayList<>();
 
         this.loadJSON(inFileName);
+
+        this.neo4jDriver = GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "1234"));
+
+        try (Session session = neo4jDriver.session()) {
+            session.run("MATCH ()-[r]-() DELETE r");
+            session.run("MATCH (n) DELETE n");
+        }
+
 
     }
 
@@ -213,6 +224,30 @@ public class AnalyticsProcessor {
         }
    }
 
+    private void neo4JSemanticGraphBuilder(SemanticGraph dependencies, int docId, int senId) {
+        List<SemanticGraphEdge> edgeList = dependencies.edgeListSorted();
+        ListIterator<SemanticGraphEdge> it = edgeList.listIterator();
+
+        while (it.hasNext()) {
+            SemanticGraphEdge edge = it.next();
+            String source = edge.getSource().value();
+            int sourceIdx = edge.getSource().index();
+            String target = edge.getTarget().value();
+            int targetIdx = edge.getTarget().index();
+            String relation = edge.getRelation().toString();
+
+            try (Session session = neo4jDriver.session()) {
+                session.run("MERGE (a:WordNode { word : \"" + target + "\" }) " +
+                        "MERGE (b:WordNode { word: \"" + source + "\" })" +
+                        "MERGE (a)-[:`" + relation + "`]->(b)");
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
+    }
+
     public void build()
     {
         for (NewsArticles newsArticle: newsArticles) {
@@ -234,17 +269,22 @@ public class AnalyticsProcessor {
                 // this is the Stanford dependency graph of the current sentence
                 SemanticGraph dependencies = sentence.get(SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class);
                 //            System.out.println(dependencies.toString());
-                jsonGraphObj = buildDependency(dependencies);
+//                jsonGraphObj = buildDependency(dependencies);
 
                 JSONObject jsonIDobj = new JSONObject();
                 jsonIDobj.put("DocumentID", docID);
                 jsonIDobj.put("SentenceID", sentenceID);
 
-                jsonGraphObj.put("ID",jsonIDobj);
+//                jsonGraphObj.put("ID",jsonIDobj);
 
 
-                jsonGraphArray.add(jsonGraphObj);
+//                jsonGraphArray.add(jsonGraphObj);
+
+                neo4JSemanticGraphBuilder(dependencies, 1, sentenceID);
+                break;
             }
+
+            break;
         }
         // This is the coreference link graph
         // Each chain stores a set of mentions that link to each other,
