@@ -237,8 +237,8 @@ public class AnalyticsProcessor {
             String relation = edge.getRelation().toString();
 
             try (Session session = neo4jDriver.session()) {
-                session.run("MERGE (a:WordNode { word : \"" + target + "\" }) " +
-                        "MERGE (b:WordNode { word: \"" + source + "\" })" +
+                session.run("MERGE (a:WordNode { word : \"" + source + "\", idx: "+ String.valueOf(sourceIdx) +"}) " +
+                        "MERGE (b:WordNode { word: \"" + target + "\", idx: "+ String.valueOf(targetIdx) + "})" +
                         "MERGE (a)-[:`" + relation + "`]->(b)");
             }
             catch (Exception e){
@@ -295,16 +295,17 @@ public class AnalyticsProcessor {
 //
 //        System.out.println(graph.toString());
 
-        try {
-
-            FileWriter file = new FileWriter(outFileName);
-            file.write(jsonGraphArray.toJSONString());
-            file.flush();
-            file.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//
+//            FileWriter file = new FileWriter(outFileName);
+//            file.write(jsonGraphArray.toJSONString());
+//            file.flush();
+//            file.close();
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        System.out.println("All done!!!");
     }
 
     public static void main(String args[]) {
