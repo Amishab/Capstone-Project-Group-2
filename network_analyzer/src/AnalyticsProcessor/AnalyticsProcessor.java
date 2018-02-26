@@ -27,7 +27,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class AnalyticsProcessor {
+import static java.lang.System.exit;
+
+import utils.replace_UTF8;
+
+public class AnalyticsProcessor implements AutoCloseable {
     StanfordCoreNLP pipeline;
     ArrayList<NewsArticles> newsArticles;
     JSONArray jsonGraphArray = new JSONArray();
@@ -248,12 +252,39 @@ public class AnalyticsProcessor {
 
     }
 
+    @Override
+    public void close() throws Exception {
+        this.neo4jDriver.close();
+    }
+
+    private String replaceIllegalChars(String text) {
+        try {
+            text = replace_UTF8.ReplaceLooklike(text);
+            text = text.replace("≦", "<=");
+            text = text.replace("≧", ">=");
+            text = text.replace("㎡", "m2");
+            text = text.replace("ï", "i");
+            text = text.replace("˄", "^");
+            text = text.replace("˚", " degrees");
+            text = text.replace("※", "-");
+            text = text.replace("㎲", " microseconds");
+            text = text.replace("́s", "'s");
+            text = text.replace("╳", "x");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        text = text.replace(" - ", "\n\n");
+        text = text.replace("- ", "\n\n");
+        return text.trim();
+    }
+
     public void build()
     {
         for (NewsArticles newsArticle: newsArticles) {
             String text = newsArticle.newsArticle;
             String docID = newsArticle.newsID;
 
+            text = replaceIllegalChars(text);
             Annotation document = new Annotation(text);
             pipeline.annotate(document);
 
@@ -309,7 +340,12 @@ public class AnalyticsProcessor {
     }
 
     public static void main(String args[]) {
+        System.out.println("Start");
         AnalyticsProcessor ap = new AnalyticsProcessor();
         ap.build();
+
+        System.out.println("End!!!");
+
+        exit(0);
     }
 }

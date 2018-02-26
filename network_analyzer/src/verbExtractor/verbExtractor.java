@@ -10,6 +10,7 @@ import edu.stanford.nlp.util.CoreMap;
 
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
+import utils.replace_UTF8;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -21,8 +22,8 @@ public class verbExtractor {
     StanfordCoreNLP pipeline;
     ArrayList<String> newsArticles;
     JSONArray verbList = new JSONArray();
-    String inFileName = "data/json/articles/caliNewsPaper_senate_sample.json";
-    String outFileName = "data/json/articles/caliNewsPaper_verbList.json";
+    String inFileName = "data/json/articles/Final_filteredNews_1.json";
+    String outFileName = "data/json/articles/Final_filteredNews_verb_list.json";
 
     public verbExtractor()
     {
@@ -35,10 +36,32 @@ public class verbExtractor {
         this.loadJSON(inFileName);
 
     }
+    private String replaceIllegalChars(String text) {
+        try {
+            text = replace_UTF8.ReplaceLooklike(text);
+            text = text.replace("≦", "<=");
+            text = text.replace("≧", ">=");
+            text = text.replace("㎡", "m2");
+            text = text.replace("ï", "i");
+            text = text.replace("˄", "^");
+            text = text.replace("˚", " degrees");
+            text = text.replace("※", "-");
+            text = text.replace("㎲", " microseconds");
+            text = text.replace("́s", "'s");
+            text = text.replace("╳", "x");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        text = text.replace(" - ", "\n\n");
+        text = text.replace("- ", "\n\n");
+        return text.trim();
+    }
+
 
     public void extractVerb()
     {
         for (String text: newsArticles) {
+            text = replaceIllegalChars(text);
 //            Annotation document = new Annotation(String.join(" ", newsArticles));
             Annotation document = new Annotation(text);
             pipeline.annotate(document);
@@ -53,8 +76,8 @@ public class verbExtractor {
 //                System.out.println(dependencies.toString());
 
                 IndexedWord rootVerb = dependencies.getFirstRoot();
-                if (rootVerb.ner().equals("O")) {
-                    System.out.println("rootverb :" + rootVerb.originalText() + " lemma: " + rootVerb.lemma());
+                if (rootVerb!=null && rootVerb.ner()!=null && rootVerb.ner().equals("O")) {
+//                    System.out.println("rootverb :" + rootVerb.originalText() + " lemma: " + rootVerb.lemma());
 
                     JSONObject obj = new JSONObject();
                     obj.put("verb", rootVerb.originalText());
@@ -89,7 +112,7 @@ public class verbExtractor {
             while (i.hasNext())
             {
                 JSONObject jsonObject = (JSONObject)i.next();
-                String news = (String) jsonObject.get("news");
+                String news = (String) jsonObject.get("newsText");
 
                 this.newsArticles.add(news);
             }
