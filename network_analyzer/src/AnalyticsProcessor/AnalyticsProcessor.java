@@ -228,7 +228,7 @@ public class AnalyticsProcessor implements AutoCloseable {
         }
    }
 
-    private void neo4JSemanticGraphBuilder(SemanticGraph dependencies, int docId, int senId) {
+    private void neo4JSemanticGraphBuilder(SemanticGraph dependencies, int docId, int senId) throws IOException {
         List<SemanticGraphEdge> edgeList = dependencies.edgeListSorted();
         ListIterator<SemanticGraphEdge> it = edgeList.listIterator();
 
@@ -253,7 +253,10 @@ public class AnalyticsProcessor implements AutoCloseable {
             catch (Exception e){
                 e.printStackTrace();
             }
+
         }
+        GraphReducer gr = new GraphReducer(neo4jDriver);
+        gr.runRules();
 
     }
 
@@ -283,8 +286,7 @@ public class AnalyticsProcessor implements AutoCloseable {
         return text.trim();
     }
 
-    public void build()
-    {
+    public void build() throws IOException {
         for (NewsArticles newsArticle: newsArticles) {
             String text = newsArticle.newsArticle;
             String docID = newsArticle.newsID;
@@ -344,7 +346,7 @@ public class AnalyticsProcessor implements AutoCloseable {
         System.out.println("All done!!!");
     }
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
         System.out.println("Start");
         AnalyticsProcessor ap = new AnalyticsProcessor();
         ap.build();
