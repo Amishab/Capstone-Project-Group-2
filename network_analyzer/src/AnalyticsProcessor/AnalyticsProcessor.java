@@ -238,12 +238,17 @@ public class AnalyticsProcessor implements AutoCloseable {
             int sourceIdx = edge.getSource().index();
             String target = edge.getTarget().value();
             int targetIdx = edge.getTarget().index();
+            String s_ner  = edge.getSource().ner();
+            String t_ner  = edge.getTarget().ner();
+            String s_tag  = edge.getSource().tag();
+            String t_tag  = edge.getTarget().tag();
             String relation = edge.getRelation().toString();
+            relation = relation.replace(":", "_");
 
             try (Session session = neo4jDriver.session()) {
-                session.run("MERGE (a:WordNode { word : \"" + source + "\", idx: "+ String.valueOf(sourceIdx) +"}) " +
-                        "MERGE (b:WordNode { word: \"" + target + "\", idx: "+ String.valueOf(targetIdx) + "})" +
-                        "MERGE (a)-[:`" + relation + "`]->(b)");
+                session.run("MERGE (a:"+s_ner+" { word : \"" + source + "\", idx: "+ String.valueOf(sourceIdx) +", tag : \""+s_tag+"\"}) " +
+                        "MERGE (b:"+t_ner+" { word: \"" + target + "\", idx: "+ String.valueOf(targetIdx) + ", tag :\"" +t_tag+ "\"})" +
+                        "MERGE (a)-[r:dep{type:\""+relation+"\"}]->(b)");
             }
             catch (Exception e){
                 e.printStackTrace();
