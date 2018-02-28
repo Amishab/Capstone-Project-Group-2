@@ -35,8 +35,8 @@ public class AnalyticsProcessor implements AutoCloseable {
     StanfordCoreNLP pipeline;
     ArrayList<NewsArticles> newsArticles;
     JSONArray jsonGraphArray = new JSONArray();
-    String inFileName = "data/json/graphbuilder/test1.json";
-    String outFileName = "data/json/graphbuilder/test1_graph2.json";
+    String inFileName = "data/json/graphbuilder/test2graph.json";
+    String outFileName = "data/json/graphbuilder/test2graph_output.json";
     private final Driver neo4jDriver;
 
     private class NewsArticles   {
@@ -228,7 +228,7 @@ public class AnalyticsProcessor implements AutoCloseable {
         }
    }
 
-    private void neo4JSemanticGraphBuilder(SemanticGraph dependencies, int docId, int senId) throws IOException {
+    private void neo4JSemanticGraphBuilder(SemanticGraph dependencies, String docId, int senId) throws IOException {
         List<SemanticGraphEdge> edgeList = dependencies.edgeListSorted();
         ListIterator<SemanticGraphEdge> it = edgeList.listIterator();
 
@@ -246,8 +246,16 @@ public class AnalyticsProcessor implements AutoCloseable {
             relation = relation.replace(":", "_");
 
             try (Session session = neo4jDriver.session()) {
-                session.run("MERGE (a:"+s_ner+" { word : \"" + source + "\", idx: "+ String.valueOf(sourceIdx) +", tag : \""+s_tag+"\"}) " +
-                        "MERGE (b:"+t_ner+" { word: \"" + target + "\", idx: "+ String.valueOf(targetIdx) + ", tag :\"" +t_tag+ "\"})" +
+                session.run("MERGE (a:"+s_ner+" { word : \"" + source
+                        + "\", idx: "+ String.valueOf(sourceIdx)
+                        + ", docId : "+ docId
+                        + ",senId : " + String.valueOf(senId)
+                        +", tag : \""+s_tag+"\" }) " +
+                        "MERGE (b:"+t_ner+" { word: \"" + target
+                        + "\", idx: "+ String.valueOf(targetIdx)
+                        + ", docId : "+ docId
+                        + ",senId : " + String.valueOf(senId)
+                        + ", tag :\"" +t_tag+ "\"})" +
                         "MERGE (a)-[r:dep{type:\""+relation+"\"}]->(b)");
             }
             catch (Exception e){
@@ -318,11 +326,11 @@ public class AnalyticsProcessor implements AutoCloseable {
 
 //                jsonGraphArray.add(jsonGraphObj);
 
-                neo4JSemanticGraphBuilder(dependencies, 1, sentenceID);
-                break;
+                neo4JSemanticGraphBuilder(dependencies, docID, sentenceID);
+//                break;
             }
 
-            break;
+//            break;
         }
         // This is the coreference link graph
         // Each chain stores a set of mentions that link to each other,
