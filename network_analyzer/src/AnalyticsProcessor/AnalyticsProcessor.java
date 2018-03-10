@@ -87,6 +87,7 @@ public class AnalyticsProcessor implements AutoCloseable {
 
                 this.newsArticles.add(new NewsArticles(news, newsId, collectionDate));
             }
+            System.out.println("Total articles: " + Integer.toString(this.newsArticles.size()));
 
         } catch (Exception ex) {
             ex.printStackTrace();
