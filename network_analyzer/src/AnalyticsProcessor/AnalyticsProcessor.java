@@ -25,6 +25,7 @@ import javax.xml.bind.SchemaOutputResolver;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.*;
 
 import static java.lang.System.exit;
@@ -202,11 +203,19 @@ public class AnalyticsProcessor implements AutoCloseable {
     }
 
     public static void main(String args[]) throws IOException {
-        System.out.println("Start");
+        long start = System.currentTimeMillis();
+        String starttime = LocalDateTime.now().toString();
+
+        System.out.println("Start: ");
+
         AnalyticsProcessor ap = new AnalyticsProcessor();
         ap.build();
 
-        System.out.println("End!!!");
+        // Get elapsed time in milliseconds
+        long elapsedTimeMillis = System.currentTimeMillis()-start;
+
+        System.out.println(" Start   : " + starttime
+                + "\n End     : "+ LocalDateTime.now() + "\n Elapsed : " + String.valueOf(elapsedTimeMillis/1000) + "s");
 
         exit(0);
     }
