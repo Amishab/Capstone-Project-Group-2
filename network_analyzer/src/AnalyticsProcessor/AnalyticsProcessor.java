@@ -36,7 +36,7 @@ public class AnalyticsProcessor implements AutoCloseable {
     StanfordCoreNLP pipeline;
     ArrayList<NewsArticles> newsArticles;
 
-    String inFileName = "data/json/graphbuilder/test2graph.json";
+    String inFileName = "data/json/graphbuilder/Final_filteredNews_1.json";
 
     private final Driver neo4jDriver;
 
@@ -81,7 +81,7 @@ public class AnalyticsProcessor implements AutoCloseable {
             while (i.hasNext())
             {
                 JSONObject jsonObject = (JSONObject)i.next();
-                String news = (String) jsonObject.get("news");
+                String news = (String) jsonObject.get("newsText");
                 Long newsId = (Long) jsonObject.get("newsId");
                 String collectionDate = (String) jsonObject.get("converted_collection_date");
 
@@ -176,6 +176,10 @@ public class AnalyticsProcessor implements AutoCloseable {
             String docID = newsArticle.newsID;
             String collectionDate = newsArticle.collectionDate.split(" ")[0];
             String collectionTime = newsArticle.collectionDate.split(" ")[1];
+
+            if (text == null || text.isEmpty()) {
+                continue;
+            }
 
             ArticleCleaner ac = new ArticleCleaner(text);
             text = ac.clean();
