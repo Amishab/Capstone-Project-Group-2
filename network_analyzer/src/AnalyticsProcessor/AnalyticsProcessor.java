@@ -36,7 +36,7 @@ public class AnalyticsProcessor implements AutoCloseable {
     StanfordCoreNLP pipeline;
     ArrayList<NewsArticles> newsArticles;
 
-    String inFileName = "data/json/graphbuilder/Final_filteredNews_1.json";
+    String inFileName = "data/json/graphbuilder/test2graph.json";
 
     private final Driver neo4jDriver;
 
@@ -139,8 +139,8 @@ public class AnalyticsProcessor implements AutoCloseable {
             }
         }
 
-//        GraphReducer gr = new GraphReducer(neo4jDriver);
-//        gr.runRules();
+        GraphReducer gr = new GraphReducer(neo4jDriver);
+        gr.runRules(docId,senId);
 
     }
 
