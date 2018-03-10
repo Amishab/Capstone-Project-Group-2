@@ -176,7 +176,12 @@ public class AnalyticsProcessor implements AutoCloseable {
             String collectionDate = newsArticle.collectionDate.split(" ")[0];
             String collectionTime = newsArticle.collectionDate.split(" ")[1];
 
-            text = replaceIllegalChars(text);
+            ArticleCleaner ac = new ArticleCleaner(text);
+            text = ac.clean();
+
+            if (text.isEmpty()) {
+                continue;
+            }
 
             Annotation document = new Annotation(text);
             pipeline.annotate(document);
