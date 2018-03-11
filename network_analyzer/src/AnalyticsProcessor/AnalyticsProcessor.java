@@ -81,7 +81,7 @@ public class AnalyticsProcessor implements AutoCloseable {
             while (i.hasNext())
             {
                 JSONObject jsonObject = (JSONObject)i.next();
-                String news = (String) jsonObject.get("newsText");
+                String news = (String) jsonObject.get("news");
                 Long newsId = (Long) jsonObject.get("newsId");
                 String collectionDate = (String) jsonObject.get("converted_collection_date");
 

@@ -217,22 +217,41 @@ public class GraphReducer {
         return ret;
     }
 
+
+
+    /**
+     * Filter out unexpected characters from relation ship names
+     *
+     * current rules :
+     *     replace  - with _
+     *
+     */
+
+    public String ret_rel_type(String ret){
+
+        ret.replaceAll("-","_");
+        return ret;
+
+    }
+
+
+
     public String get_rel_type(ArrayList<String> w_l, ArrayList<String> t_l){
         String ret ;
         if (t_l.contains("VB")){
             ret = w_l.get(t_l.indexOf("VB"));
-            return ret;
+            return ret_rel_type(ret);
         }else if(t_l.contains("VBN")){
             ret = w_l.get(t_l.indexOf("VBN"));
-            return ret;
+            return ret_rel_type(ret);
         }else if(t_l.contains("VBD")){
             ret = w_l.get(t_l.indexOf("VBD"));
-            return ret;
+            return ret_rel_type(ret);
         }else if(t_l.contains("VBZ")){
             ret = w_l.get(t_l.indexOf("VBZ"));
-            return ret;
+            return ret_rel_type(ret);
         }
-        return "CO_REFERRED";
+        return ret_rel_type("CO_REFERRED");
     }
 
 
