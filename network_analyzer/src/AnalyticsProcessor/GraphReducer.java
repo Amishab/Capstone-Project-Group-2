@@ -28,6 +28,7 @@ public class GraphReducer {
     private Driver neo4jDriver;
 
 
+
     public GraphReducer(Driver nd) throws IOException {
         this.neo4jDriver = nd;
         this.senators = new ArrayList<>();
@@ -230,7 +231,8 @@ public class GraphReducer {
 
     public String ret_rel_type(String ret){
 
-        ret.replaceAll(Pattern.quote("-"),"_");
+        ret = ret.replaceAll(Pattern.quote("-"),"_");
+        System.out.println("ret_rel_type() : "+ret);
         return ret;
 
     }
@@ -322,6 +324,7 @@ public class GraphReducer {
                                 "SET r.type =  \"MAIN\" "+
                                 "RETURN r" ;
 
+                        System.out.println(query);
                         e_res = session.run(query);
                         w_list.clear();
                         t_list.clear();
