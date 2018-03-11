@@ -16,6 +16,7 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class GraphReducer {
 
@@ -229,7 +230,7 @@ public class GraphReducer {
 
     public String ret_rel_type(String ret){
 
-        ret.replaceAll("-","_");
+        ret.replaceAll(Pattern.quote("-"),"_");
         return ret;
 
     }
