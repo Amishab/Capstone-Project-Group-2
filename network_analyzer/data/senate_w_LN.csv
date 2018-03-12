@@ -1,102 +1,102 @@
-Name,Last Name,YearsInOffice,Party,State,TermEnds
-Al Franken,Franken,8,Democratic,Minnesota,2021
-Amy Klobuchar,Klobuchar,10,Democratic,Minnesota,2019
-Angus King,King,4,Independent,Maine,2019
-Ben Cardin,Cardin,10,Democratic,Maryland,2019
-Ben Sasse,Sasse,2,Republican,Nebraska,2021
-Bernie Sanders,Sanders,10,Independent,Vermont,2019
-Bill Cassidy,Cassidy,2,Republican,Louisiana,2021
-Bill Nelson,Nelson,17,Democratic,Florida,2019
-Bob Casey  Jr.,Casey ,10,Democratic,Pennsylvania,2019
-Bob Corker,Corker,10,Republican,Tennessee,2019
-Bob Menendez,Menendez,11,Democratic,New Jersey,2019
-Brian E. Schatz,Schatz,5,Democratic,Hawaii,2023
-Catherine Cortez Masto,Cortez Masto,0,Democratic,Nevada,2023
-Chris Coons,Coons,7,Democratic,Delaware,2021
-Christopher S. Murphy,Murphy,4,Democratic,Connecticut,2019
-Chris Van Hollen,Van Hollen,0,Democratic,Maryland,2023
-Chuck Grassley,Grassley,36,Republican,Iowa,2023
-Chuck Schumer,Schumer,18,Democratic,New York,2023
-Claire McCaskill,McCaskill,10,Democratic,Missouri,2019
-Cory Booker,Booker,4,Democratic,New Jersey,2021
-Cory Gardner,Gardner,2,Republican,Colorado,2021
-Daniel S. Sullivan,Sullivan,2,Republican,Alaska,2021
-David Perdue,Perdue,2,Republican,Georgia,2021
-Dean Heller,Heller,6,Republican,Nevada,2019
-Deb Fischer,Fischer,4,Republican,Nebraska,2019
-Debbie Stabenow,Stabenow,16,Democratic,Michigan,2019
-Dianne Feinstein,Feinstein,24,Democratic,California,2019
-Dick Durbin,Durbin,20,Democratic,Illinois,2021
-Ed Markey,Markey,4,Democratic,Massachusetts,2021
-Elizabeth Warren,Warren,4,Democratic,Massachusetts,2019
-Gary Peters,Peters,2,Democratic,Michigan,2021
-Heidi Heitkamp,Heitkamp,4,Democratic,North Dakota,2019
-Jack Reed,Reed,20,Democratic,Rhode Island,2021
-James Lankford,Lankford,2,Republican,Oklahoma,2023
-Jeanne Shaheen,Shaheen,8,Democratic,New Hampshire,2021
-Jeff Flake,Flake,4,Republican,Arizona,2019
-Jeff Merkley,Merkley,8,Democratic,Oregon,2021
-Jerry Moran,Moran,6,Republican,Kansas,2023
-Jim Inhofe,Inhofe,22,Republican,Oklahoma,2021
-Jim Risch,Risch,8,Republican,Idaho,2021
-Joe Donnelly,Donnelly,4,Democratic,Indiana,2019
-Joe Manchin III,Manchin,7,Democratic,West Virginia,2019
-John Barrasso,Barrasso,10,Republican,Wyoming,2019
-John Boozman,Boozman,6,Republican,Arkansas,2023
-John Cornyn,Cornyn,14,Republican,Texas,2021
-John Hoeven,Hoeven,6,Republican,North Dakota,2023
-John McCain,McCain,30,Republican,Arizona,2023
-John Neely Kennedy,Kennedy,0,Republican,Louisiana,2023
-John Thune,Thune,12,Republican,South Dakota,2023
-Johnny Isakson,Isakson,12,Republican,Georgia,2023
-Jon Tester,Tester,10,Democratic,Montana,2019
-Joni Ernst,Ernst,2,Republican,Iowa,2021
-Kamala D. Harris,Harris,0,Democratic,California,2023
-Kirsten Gillibrand,Gillibrand,8,Democratic,New York,2019
-Lamar Alexander,Alexander,14,Republican,Tennessee,2021
-Lindsey Graham,Graham,14,Republican,South Carolina,2021
-Lisa Murkowski,Murkowski,14,Republican,Alaska,2023
-Luther J. Strange  III,Strange,0,Republican,Alabama,2019
-Maggie Hassan,Hassan,0,Democratic,New Hampshire,2023
-Marco Rubio,Rubio,6,Republican,Florida,2023
-Maria Cantwell,Cantwell,16,Democratic,Washington,2019
-Mark Warner,Warner,8,Democratic,Virginia,2021
-Martin Heinrich,Heinrich,4,Democratic,New Mexico,2019
-Mazie K. Hirono,Hirono,4,Democratic,Hawaii,2019
-Michael Bennet,Bennet,8,Democratic,Colorado,2023
-Mike Crapo,Crapo,18,Republican,Idaho,2023
-Mike Enzi,Enzi,20,Republican,Wyoming,2021
-Mike Lee,Lee,6,Republican,Utah,2023
-Mike Rounds,Rounds,2,Republican,South Dakota,2021
-Mitch McConnell,McConnell,32,Republican,Kentucky,2021
-Orrin Hatch,Hatch,40,Republican,Utah,2019
-Pat Roberts,Roberts,20,Republican,Kansas,2021
-Pat Toomey,Toomey,6,Republican,Pennsylvania,2023
-Patrick Leahy,Leahy,42,Democratic,Vermont,2023
-Patty Murray,Murray,24,Democratic,Washington,2023
-Rand Paul,Paul,6,Republican,Kentucky,2023
-Richard Blumenthal,Blumenthal,6,Democratic,Connecticut,2023
-Richard Burr,Burr,12,Republican,North Carolina,2023
-Richard Shelby,Shelby,30,Republican,Alabama,2023
-Rob Portman,Portman,6,Republican,Ohio,2023
-Roger Wicker,Wicker,10,Republican,Mississippi,2019
-Ron Johnson,Johnson,6,Republican,Wisconsin,2023
-Ron Wyden,Wyden,21,Democratic,Oregon,2023
-Roy Blunt,Blunt,6,Republican,Missouri,2023
-Sheldon Whitehouse,Whitehouse,10,Democratic,Rhode Island,2019
-Shelley Moore Capito,Capito,2,Republican,West Virginia,2021
-Sherrod Brown,Brown,10,Democratic,Ohio,2019
-Steve Daines,Daines,2,Republican,Montana,2021
-Susan Collins,Collins,20,Republican,Maine,2021
-Tammy Baldwin,Baldwin,4,Democratic,Wisconsin,2019
-Tammy Duckworth,Duckworth,0,Democratic,Illinois,2023
-Ted Cruz,Cruz,4,Republican,Texas,2019
-Thad Cochran,Cochran,39,Republican,Mississippi,2021
-Thom Tillis,Tillis,2,Republican,North Carolina,2021
-Tim Kaine,Kaine,4,Democratic,Virginia,2019
-Tim Scott,Scott,4,Republican,South Carolina,2023
-Todd C. Young,Young,0,Republican,Indiana,2023
-Tom Carper,Carper,16,Democratic,Delaware,2019
-Tom Cotton,Cotton,2,Republican,Arkansas,2021
-Tom Udall,Udall,8,Democratic,New Mexico,2021
-Donald Trump,Trump,4,Republican,Washington,2022
+Name,Last Name,YearsInOffice,Party,State,TermEnds,Alias
+Al Franken,Franken,8,Democratic,Minnesota,2021,
+Amy Klobuchar,Klobuchar,10,Democratic,Minnesota,2019,
+Angus King,King,4,Independent,Maine,2019,
+Ben Cardin,Cardin,10,Democratic,Maryland,2019,
+Ben Sasse,Sasse,2,Republican,Nebraska,2021,
+Bernie Sanders,Sanders,10,Independent,Vermont,2019,
+Bill Cassidy,Cassidy,2,Republican,Louisiana,2021,
+Bill Nelson,Nelson,17,Democratic,Florida,2019,
+Bob Casey  Jr.,Casey ,10,Democratic,Pennsylvania,2019,
+Bob Corker,Corker,10,Republican,Tennessee,2019,
+Bob Menendez,Menendez,11,Democratic,New Jersey,2019,
+Brian E. Schatz,Schatz,5,Democratic,Hawaii,2023,
+Catherine Cortez Masto,Cortez Masto,0,Democratic,Nevada,2023,
+Chris Coons,Coons,7,Democratic,Delaware,2021,
+Christopher S. Murphy,Murphy,4,Democratic,Connecticut,2019,
+Chris Van Hollen,Van Hollen,0,Democratic,Maryland,2023,
+Chuck Grassley,Grassley,36,Republican,Iowa,2023,"Charles Ernest Grassley,Charles Grassley"
+Chuck Schumer,Schumer,18,Democratic,New York,2023,
+Claire McCaskill,McCaskill,10,Democratic,Missouri,2019,
+Cory Booker,Booker,4,Democratic,New Jersey,2021,
+Cory Gardner,Gardner,2,Republican,Colorado,2021,
+Daniel S. Sullivan,Sullivan,2,Republican,Alaska,2021,
+David Perdue,Perdue,2,Republican,Georgia,2021,
+Dean Heller,Heller,6,Republican,Nevada,2019,
+Deb Fischer,Fischer,4,Republican,Nebraska,2019,
+Debbie Stabenow,Stabenow,16,Democratic,Michigan,2019,
+Dianne Feinstein,Feinstein,24,Democratic,California,2019,
+Dick Durbin,Durbin,20,Democratic,Illinois,2021,
+Ed Markey,Markey,4,Democratic,Massachusetts,2021,
+Elizabeth Warren,Warren,4,Democratic,Massachusetts,2019,
+Gary Peters,Peters,2,Democratic,Michigan,2021,
+Heidi Heitkamp,Heitkamp,4,Democratic,North Dakota,2019,
+Jack Reed,Reed,20,Democratic,Rhode Island,2021,
+James Lankford,Lankford,2,Republican,Oklahoma,2023,
+Jeanne Shaheen,Shaheen,8,Democratic,New Hampshire,2021,
+Jeff Flake,Flake,4,Republican,Arizona,2019,
+Jeff Merkley,Merkley,8,Democratic,Oregon,2021,
+Jerry Moran,Moran,6,Republican,Kansas,2023,
+Jim Inhofe,Inhofe,22,Republican,Oklahoma,2021,
+Jim Risch,Risch,8,Republican,Idaho,2021,
+Joe Donnelly,Donnelly,4,Democratic,Indiana,2019,
+Joe Manchin III,Manchin,7,Democratic,West Virginia,2019,
+John Barrasso,Barrasso,10,Republican,Wyoming,2019,
+John Boozman,Boozman,6,Republican,Arkansas,2023,
+John Cornyn,Cornyn,14,Republican,Texas,2021,
+John Hoeven,Hoeven,6,Republican,North Dakota,2023,
+John McCain,McCain,30,Republican,Arizona,2023,
+John Neely Kennedy,Kennedy,0,Republican,Louisiana,2023,
+John Thune,Thune,12,Republican,South Dakota,2023,
+Johnny Isakson,Isakson,12,Republican,Georgia,2023,
+Jon Tester,Tester,10,Democratic,Montana,2019,
+Joni Ernst,Ernst,2,Republican,Iowa,2021,
+Kamala D. Harris,Harris,0,Democratic,California,2023,
+Kirsten Gillibrand,Gillibrand,8,Democratic,New York,2019,
+Lamar Alexander,Alexander,14,Republican,Tennessee,2021,
+Lindsey Graham,Graham,14,Republican,South Carolina,2021,
+Lisa Murkowski,Murkowski,14,Republican,Alaska,2023,
+Luther J. Strange  III,Strange,0,Republican,Alabama,2019,
+Maggie Hassan,Hassan,0,Democratic,New Hampshire,2023,
+Marco Rubio,Rubio,6,Republican,Florida,2023,
+Maria Cantwell,Cantwell,16,Democratic,Washington,2019,
+Mark Warner,Warner,8,Democratic,Virginia,2021,
+Martin Heinrich,Heinrich,4,Democratic,New Mexico,2019,
+Mazie K. Hirono,Hirono,4,Democratic,Hawaii,2019,
+Michael Bennet,Bennet,8,Democratic,Colorado,2023,
+Mike Crapo,Crapo,18,Republican,Idaho,2023,
+Mike Enzi,Enzi,20,Republican,Wyoming,2021,
+Mike Lee,Lee,6,Republican,Utah,2023,
+Mike Rounds,Rounds,2,Republican,South Dakota,2021,
+Mitch McConnell,McConnell,32,Republican,Kentucky,2021,
+Orrin Hatch,Hatch,40,Republican,Utah,2019,
+Pat Roberts,Roberts,20,Republican,Kansas,2021,
+Pat Toomey,Toomey,6,Republican,Pennsylvania,2023,
+Patrick Leahy,Leahy,42,Democratic,Vermont,2023,
+Patty Murray,Murray,24,Democratic,Washington,2023,
+Rand Paul,Paul,6,Republican,Kentucky,2023,
+Richard Blumenthal,Blumenthal,6,Democratic,Connecticut,2023,
+Richard Burr,Burr,12,Republican,North Carolina,2023,
+Richard Shelby,Shelby,30,Republican,Alabama,2023,
+Rob Portman,Portman,6,Republican,Ohio,2023,
+Roger Wicker,Wicker,10,Republican,Mississippi,2019,
+Ron Johnson,Johnson,6,Republican,Wisconsin,2023,
+Ron Wyden,Wyden,21,Democratic,Oregon,2023,
+Roy Blunt,Blunt,6,Republican,Missouri,2023,
+Sheldon Whitehouse,Whitehouse,10,Democratic,Rhode Island,2019,
+Shelley Moore Capito,Capito,2,Republican,West Virginia,2021,
+Sherrod Brown,Brown,10,Democratic,Ohio,2019,
+Steve Daines,Daines,2,Republican,Montana,2021,
+Susan Collins,Collins,20,Republican,Maine,2021,
+Tammy Baldwin,Baldwin,4,Democratic,Wisconsin,2019,
+Tammy Duckworth,Duckworth,0,Democratic,Illinois,2023,
+Ted Cruz,Cruz,4,Republican,Texas,2019,
+Thad Cochran,Cochran,39,Republican,Mississippi,2021,
+Thom Tillis,Tillis,2,Republican,North Carolina,2021,
+Tim Kaine,Kaine,4,Democratic,Virginia,2019,
+Tim Scott,Scott,4,Republican,South Carolina,2023,
+Todd C. Young,Young,0,Republican,Indiana,2023,
+Tom Carper,Carper,16,Democratic,Delaware,2019,
+Tom Cotton,Cotton,2,Republican,Arkansas,2021,
+Tom Udall,Udall,8,Democratic,New Mexico,2021,
+Donald Trump,Trump,4,Republican,Washington,2022,

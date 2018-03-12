@@ -1,6 +1,7 @@
 package AnalyticsProcessor;
 
-import java.util.ArrayList;
+import java.util.*;
+
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import org.neo4j.driver.v1.Driver;
@@ -15,7 +16,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
 import java.util.regex.Pattern;
 
 public class GraphReducer {
@@ -23,6 +23,7 @@ public class GraphReducer {
     ArrayList<Senator>  senators;
     List<String> sen_names;
     List<String> sen_last_names;
+    HashMap sen_alias;
     Session session;
     String senators_csv = "data/senate_w_LN.csv";
     private Driver neo4jDriver;
@@ -34,10 +35,16 @@ public class GraphReducer {
         this.senators = new ArrayList<>();
         this.sen_names  = new ArrayList<String>();
         this.sen_last_names  = new ArrayList<String>();
+        this.sen_alias = new HashMap<String,Integer>();
         this.readCSV(senators_csv);
         for(Senator sen:this.senators){
-            sen_names.add(sen.name);
-            sen_last_names.add(sen.lastName);
+            this.sen_names.add(sen.name);
+            this.sen_last_names.add(sen.lastName);
+            for (String als_name:sen.alias){
+                System.out.println("alias name: "+als_name);
+                this.sen_alias.put(als_name,(this.sen_names.size())-1);
+
+            }
         }
 
         System.out.println("Initialized Graph Reducer");
@@ -51,6 +58,7 @@ public class GraphReducer {
         String party;
         String state;
         int termEnds;
+        ArrayList<String> alias;
 
 
         Senator(String sname,String slastName,int sy_i_o,String sparty,String sstate,int stermEnds){
@@ -60,6 +68,21 @@ public class GraphReducer {
             party = sparty;
             state = sstate;
             termEnds = stermEnds;
+        }
+
+        Senator(String sname,String slastName,int sy_i_o,String sparty,String sstate,int stermEnds,String als){
+            name=sname;
+            lastName = slastName;
+            y_i_o = sy_i_o;
+            party = sparty;
+            state = sstate;
+            termEnds = stermEnds;
+            if (!als.isEmpty()){
+                alias = new ArrayList<>(Arrays.asList(als.split(",",-1)));
+            }
+            else alias = new ArrayList<>();
+
+
 
         }
 
@@ -72,8 +95,14 @@ public class GraphReducer {
                 ){
             String[] st;
             while ((st = csvReader.readNext()) != null) {
+                if (st.length==6){
+                    this.senators.add(new Senator(st[0],st[1],Integer.parseInt(st[2]),st[3],st[4],Integer.parseInt(st[5])));
+                }
+                else if (st.length==7){
+                    this.senators.add(new Senator(st[0],st[1],Integer.parseInt(st[2]),st[3],st[4],Integer.parseInt(st[5]),st[6]));
+                }
 
-                this.senators.add(new Senator(st[0],st[1],Integer.parseInt(st[2]),st[3],st[4],Integer.parseInt(st[5])));
+
             }
         }catch (Exception ex) {
             ex.printStackTrace();
@@ -83,10 +112,22 @@ public class GraphReducer {
     public void runRules(String docId,int sen_id){
 
 
+        System.out.println("Processing docId: "+docId);
         coalesce_compound_edges(docId,sen_id);
-        find_NER_discard_unwanted(docId,sen_id);
+        find_NER_and_unwanted(docId,sen_id);
         traverse_path_connecting_ners(docId,sen_id);
     }
+
+
+    /**
+     * Coalesce consecutive PERSON words connected by a 'compound' edge
+     *
+     * current rules :
+     *     Find PERSON NODES -> that have word indices differed by 1 ( consecutive words in the sentence) ->  combine both words to construct full name
+     *
+     * todo :
+     *      Test the functionality for three consecutive words. For example , how does this work for "Charles Ernest Grassley" ?
+     */
 
     public void coalesce_compound_edges(String docId,int sen_id){
         StatementResult result;
@@ -129,7 +170,7 @@ public class GraphReducer {
         }
     }
 
-    public void find_NER_discard_unwanted(String docId,int sen_id){
+    public void find_NER_and_unwanted(String docId,int sen_id){
 
         StatementResult result;
         String dId_sId="{docId:"+docId+" , senId:"+sen_id+"}";
@@ -143,13 +184,13 @@ public class GraphReducer {
                 String pname = record.get("aword").asString();
                 known_entity_search_result ke = is_this_named_entity_needed(pname);
                 if (!ke.is_needed){
-                    System.out.println("find_NER_discard() : Discarding person : "+pname);
-                    String discard_person_query = "MATCH (a:PERSON"+dId_sId+")-[r:dep]-() "+
+                    System.out.println("find_NER_and_unwanted() : unknown person : "+pname);
+                    /*String discard_person_query = "MATCH (a:PERSON"+dId_sId+")-[r:dep]-() "+
                             "WHERE a.idx="+record.get("aidx").asInt()+" "+
                             "WITH a,r "+
                             "DELETE a,r ";
 
-                    session.run(discard_person_query);
+                    session.run(discard_person_query);*/
 
 
                 }
@@ -159,7 +200,8 @@ public class GraphReducer {
                             "MATCH (a:PERSON"+dId_sId+") " +
                             " WHERE a.idx="+record.get("aidx").asInt()+" " +
                             " SET a.word = \""+this.sen_names.get(ke.found_at)+"\" "+
-                            " SET a.k_id = "+ke.found_at+" ";
+                            " SET a.k_id = "+ke.found_at+" " +
+                            " SET a :D_PERSON";
                     session.run(rename_person_to_dictionary_name_query );
 
                 }
@@ -181,6 +223,7 @@ public class GraphReducer {
         }
 
     }
+
     public known_entity_search_result is_this_named_entity_needed(String nst){
 
         int index =0;
@@ -203,6 +246,19 @@ public class GraphReducer {
             }
             index++;
         }
+        for (Object al_sen:this.sen_alias.keySet()){
+            String al_sen_s = String.valueOf(al_sen);
+            if (al_sen_s.equalsIgnoreCase(nst)){
+                System.out.println("known_entity_search_result: found: "+al_sen);
+                ret=new known_entity_search_result(true,Integer.parseInt(sen_alias.get(al_sen).toString()));
+                return ret;
+            }
+            else{
+                System.out.println("known_entity_search_result: not found: "+al_sen);
+            }
+
+        }
+
 
         return (new known_entity_search_result(false,0));
     }
@@ -214,7 +270,9 @@ public class GraphReducer {
             ret=ret+"\""+est+"\",";
 
         }
-        ret = ret.substring(0,ret.length()-1);
+        if (ret.length()>1){
+            ret = ret.substring(0,ret.length()-1);
+        }
         ret = ret+"]";
         return ret;
     }
@@ -269,11 +327,14 @@ public class GraphReducer {
         try (Session session = this.neo4jDriver.session()) {
 
 
+            //Query to find shortest paths between persons that have k_id
             p_result = session.run("MATCH (n:PERSON"+dId_sId+") " +
+                    "WHERE EXISTS(n.k_id)" +
                     "WITH collect(n) as nodes " +
                     "UNWIND nodes as n " +
                     "UNWIND nodes as m " +
-                    "WITH * WHERE id(n) < id(m) " +
+                    //"WITH * WHERE (id(n) < id(m)) AND (n.k_id <> m.k_id) " +
+                    "WITH * WHERE (id(n) < id(m)) " +
                     "MATCH path = allShortestPaths( (n)-[*..15]-(m) ) " +
                     "RETURN path");
             while (p_result.hasNext()){
@@ -285,16 +346,18 @@ public class GraphReducer {
 
 
                 //get the start node and end node ; check if the main relation already exists
-                String rel_exist_query ="MATCH (n:PERSON{k_id:"+pt.start().get("k_id").asInt()+",docId:"+docId+"}), " +
-                        "(m:PERSON{k_id:"+pt.end().get("k_id").asInt()+",docId:"+docId+"}) " +
+                String rel_exist_query =
+                        "MATCH (n:PERSON{k_id:"+pt.start().get("k_id").asInt()+",docId:"+docId+",idx:"+pt.start().get("idx").asInt()+"}), " +
+                        "(m:PERSON{k_id:"+pt.end().get("k_id").asInt()+",docId:"+docId+",idx:"+pt.end().get("idx").asInt()+"}) " +
                         "OPTIONAL MATCH (n)-[r]->(m) " +
                         "OPTIONAL MATCH (m)-[r1]->(n) " +
                         "WHERE ( r.type=\"MAIN\") OR ( r1.type=\"MAIN\")\n" +
                         "RETURN r,r1";
                 res  = session.run(rel_exist_query);
-                System.out.println("##rel_exists start##");
+                //System.out.println("##rel_exists start##");
                 Record rel_exist_rd = res.next();
                 if (rel_exist_rd.toString().contains("{r: NULL, r1: NULL}")){
+                    if (pt.start().get("k_id").asInt()==pt.end().get("k_id").asInt()) continue;
                     // there are NULL results for rel_exist_query. So path of type MAIN doesn't exists
                     System.out.println("rel doesn't exist for "+pt.start().get("word")+"to "+pt.end().get("word") );
                 }
@@ -304,7 +367,7 @@ public class GraphReducer {
                 }
                 //System.out.println(res.next().keys());
                 //System.out.println(res.next().values());
-                System.out.println("##rel_exists end##");
+                //System.out.println("##rel_exists end##");
 
 
 
@@ -317,7 +380,10 @@ public class GraphReducer {
                         rel_type = get_rel_type(w_list,t_list);
                         System.out.println("Creating MAIN relation : "+pt.start().get("word")+" --> "+nd.get("word"));
                         String query = "MATCH (n:PERSON"+dId_sId+") , (m:PERSON"+dId_sId+") " +
-                                "WHERE n.k_id ="+pt.start().get("k_id").asInt() +" AND m.k_id ="+pt.end().get("k_id").asInt()+" "+
+                                "WHERE n.k_id ="+pt.start().get("k_id").asInt() +"" +
+                                        " AND m.k_id ="+pt.end().get("k_id").asInt()+" " +
+                                        " AND id(n) ="+pt.start().id()+ " "+
+                                        " AND id(m) ="+pt.end().id()+ " "+
                                 "CREATE (n)-[r:"+rel_type+"]->(m) " +
                                 "SET r.w_list= " + array_to_list_query(w_list)+" "+
                                 "SET r.t_list= " + array_to_list_query(t_list)+" "+
