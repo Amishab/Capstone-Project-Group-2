@@ -22,20 +22,24 @@ import org.json.simple.parser.JSONParser;
 import org.neo4j.driver.v1.*;
 
 import javax.xml.bind.SchemaOutputResolver;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.util.*;
 
 import static java.lang.System.exit;
 
 import utils.replace_UTF8;
+import utils.Log;
 
 public class AnalyticsProcessor implements AutoCloseable {
     StanfordCoreNLP pipeline;
     ArrayList<NewsArticles> newsArticles;
-    GraphReducer gr;
+
+
+
+    int totalSentences;
+    int totalArticles;
+    Log log;
 
     String inFileName = "data/json/graphbuilder/test2graph.json";
 
@@ -53,13 +57,18 @@ public class AnalyticsProcessor implements AutoCloseable {
         }
     }
 
-    public AnalyticsProcessor()
-    {
+    public AnalyticsProcessor() throws FileNotFoundException {
+        this.log = new Log();
+        log.add(new File(new File("c://temp//"),"debug_log.txt"));
+
         Properties props = new Properties();
         props.put("annotators", "tokenize, ssplit, pos, lemma, ner, parse");
         this.pipeline = new StanfordCoreNLP(props);
 
         this.newsArticles = new ArrayList<>();
+        this.totalArticles = 0;
+        this.totalSentences = 0;
+
 
         this.loadJSON(inFileName);
 
@@ -68,7 +77,6 @@ public class AnalyticsProcessor implements AutoCloseable {
         try (Session session = neo4jDriver.session()) {
             session.run("MATCH (n) DETACH DELETE n");
 
-            this.gr = new GraphReducer(neo4jDriver);
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -95,7 +103,7 @@ public class AnalyticsProcessor implements AutoCloseable {
                 this.newsArticles.add(new NewsArticles(news, newsId, collectionDate));
             }
             System.out.println("Total articles: " + Integer.toString(this.newsArticles.size()));
-
+            log.info("Total articles: " + Integer.toString(this.newsArticles.size()));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -139,7 +147,7 @@ public class AnalyticsProcessor implements AutoCloseable {
                         + ", Date: \"" + collectionDate + "\""
                         + ", Time: \"" + collectionTime  + "\""
                         + ", tag :\"" +t_tag+ "\"})"
-                        + "MERGE (a)-[r:dep{type:\""+relation+"\"}]->(b)");
+                        + "MERGE (a)-[r:"+relation+"{type:"+ "\"semantic\"}]->(b)");
             }
             catch (Exception e){
                 e.printStackTrace();
@@ -147,7 +155,8 @@ public class AnalyticsProcessor implements AutoCloseable {
         }
 
 
-        gr.runRules(docId,senId);
+//        GraphReducer gr = new GraphReducer(neo4jDriver);
+//        gr.runRules(docId,senId);
 
     }
 
@@ -188,6 +197,7 @@ public class AnalyticsProcessor implements AutoCloseable {
                 continue;
             }
 
+            long start = System.currentTimeMillis();
             ArticleCleaner ac = new ArticleCleaner(text);
             text = ac.clean();
 
@@ -210,10 +220,20 @@ public class AnalyticsProcessor implements AutoCloseable {
                 SemanticGraph dependencies = sentence.get(SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class);
 
                 neo4JSemanticGraphBuilder(dependencies, docID, sentenceID,collectionDate,collectionTime);
+                totalSentences++;
 //                break;
             }
 
+            totalArticles++;
 //            break;
+
+            // Get elapsed time in milliseconds
+            long elapsedTimeMillis = System.currentTimeMillis()-start;
+
+            log.info("\n Articles: " + totalArticles +
+                    "\n Sentences: " + totalSentences+
+                    "\n %: " + (float)totalSentences/this.newsArticles.size()*100+
+                    "\n Time taken: " + (float)elapsedTimeMillis/1000 + "s");
         }
 
         System.out.println("All done!!!");
