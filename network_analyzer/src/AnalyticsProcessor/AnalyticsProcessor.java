@@ -34,6 +34,7 @@ import utils.Log;
 public class AnalyticsProcessor implements AutoCloseable {
     StanfordCoreNLP pipeline;
     ArrayList<NewsArticles> newsArticles;
+    GraphReducer gr;
 
 
 
@@ -76,9 +77,10 @@ public class AnalyticsProcessor implements AutoCloseable {
 
         try (Session session = neo4jDriver.session()) {
             session.run("MATCH (n) DETACH DELETE n");
+            this.gr = new GraphReducer(neo4jDriver);
 
         }
-        catch (IOException e) {
+        catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -147,7 +149,7 @@ public class AnalyticsProcessor implements AutoCloseable {
                         + ", Date: \"" + collectionDate + "\""
                         + ", Time: \"" + collectionTime  + "\""
                         + ", tag :\"" +t_tag+ "\"})"
-                        + "MERGE (a)-[r:"+relation+"{type:"+ "\"semantic\"}]->(b)");
+                        + "MERGE (a)-[r:dep{type:\""+relation+"\"}]->(b)");
             }
             catch (Exception e){
                 e.printStackTrace();
@@ -155,8 +157,7 @@ public class AnalyticsProcessor implements AutoCloseable {
         }
 
 
-//        GraphReducer gr = new GraphReducer(neo4jDriver);
-//        gr.runRules(docId,senId);
+        gr.runRules(docId,senId);
 
     }
 
