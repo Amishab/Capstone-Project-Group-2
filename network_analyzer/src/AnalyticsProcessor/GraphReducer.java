@@ -27,6 +27,7 @@ public class GraphReducer {
     Session session;
     String senators_csv = "data/senate_w_LN.csv";
     private Driver neo4jDriver;
+    QueryBuilder qb;
 
 
 
@@ -46,6 +47,7 @@ public class GraphReducer {
 
             }
         }
+        this.qb = new QueryBuilder();
 
         System.out.println("Initialized Graph Reducer");
     }
@@ -113,8 +115,11 @@ public class GraphReducer {
 
 
         System.out.println("Processing docId: "+docId);
-        coalesce_compound_edges(docId,sen_id);
-        find_NER_and_unwanted(docId,sen_id);
+        coalesce_compound_edges_person_names(docId,sen_id);
+        find_defined_NERs_and_unwanted(docId,sen_id);
+        coalesce_compound_edges_next_to_persons(docId,sen_id);
+        coalesce_compound_words(docId,sen_id);
+
         traverse_path_connecting_ners(docId,sen_id);
     }
 
@@ -129,7 +134,7 @@ public class GraphReducer {
      *      Test the functionality for three consecutive words. For example , how does this work for "Charles Ernest Grassley" ?
      */
 
-    public void coalesce_compound_edges(String docId,int sen_id){
+    public void coalesce_compound_edges_person_names(String docId,int sen_id){
         StatementResult result;
         String cname;
         try(Session session = this.neo4jDriver.session()){
@@ -170,7 +175,7 @@ public class GraphReducer {
         }
     }
 
-    public void find_NER_and_unwanted(String docId,int sen_id){
+    public void find_defined_NERs_and_unwanted(String docId,int sen_id){
 
         StatementResult result;
         String dId_sId="{docId:"+docId+" , senId:"+sen_id+"}";
@@ -275,6 +280,47 @@ public class GraphReducer {
         }
         ret = ret+"]";
         return ret;
+    }
+
+    public void coalesce_compound_edges_next_to_persons(String docId,int sen_id){
+
+        String dId_sId="{docId:"+docId+" , senId:"+sen_id+"}";
+        StatementResult result;
+        List<Object> args = new ArrayList<Object>();
+        args.add(dId_sId);
+        String set_alias = qb.buildquery("set_alias_persons",args);
+        String coalesce_query = qb.buildquery("coalesce_compounds_next_to_persons",args);
+
+
+        try (Session session = this.neo4jDriver.session()) {
+
+            result = session.run(set_alias);
+            result = session.run(coalesce_query);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void coalesce_compound_words (String docId,int sen_id){
+        String dId_sId="{docId:"+docId+" , senId:"+sen_id+"}";
+        StatementResult result;
+        List<Object> args = new ArrayList<Object>();
+        args.add(dId_sId);
+        args.add(dId_sId);
+
+        String coalesce_query = qb.buildquery("coalesce_compound_words",args);
+
+        try (Session session = this.neo4jDriver.session()) {
+
+            result = session.run(coalesce_query);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
 

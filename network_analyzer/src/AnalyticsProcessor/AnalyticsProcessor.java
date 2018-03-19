@@ -35,6 +35,7 @@ import utils.replace_UTF8;
 public class AnalyticsProcessor implements AutoCloseable {
     StanfordCoreNLP pipeline;
     ArrayList<NewsArticles> newsArticles;
+    GraphReducer gr;
 
     String inFileName = "data/json/graphbuilder/test2graph.json";
 
@@ -66,7 +67,13 @@ public class AnalyticsProcessor implements AutoCloseable {
 
         try (Session session = neo4jDriver.session()) {
             session.run("MATCH (n) DETACH DELETE n");
+
+            this.gr = new GraphReducer(neo4jDriver);
         }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void loadJSON(String filename) {
@@ -139,7 +146,7 @@ public class AnalyticsProcessor implements AutoCloseable {
             }
         }
 
-        GraphReducer gr = new GraphReducer(neo4jDriver);
+
         gr.runRules(docId,senId);
 
     }
