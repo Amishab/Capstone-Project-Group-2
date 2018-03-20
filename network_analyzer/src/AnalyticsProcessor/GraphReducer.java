@@ -1,5 +1,6 @@
 package AnalyticsProcessor;
 
+import java.io.File;
 import java.util.*;
 
 import com.opencsv.CSVReader;
@@ -11,6 +12,7 @@ import org.neo4j.driver.v1.StatementResult;
 import org.neo4j.driver.v1.*;
 import org.neo4j.driver.v1.types.Node;
 import org.neo4j.driver.v1.types.Path;
+import utils.Log;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -29,9 +31,14 @@ public class GraphReducer {
     private Driver neo4jDriver;
     QueryBuilder qb;
 
+    Log log;
+
 
 
     public GraphReducer(Driver nd) throws IOException {
+        this.log = new Log();
+        log.add(new File(new File("c://temp//"),"gr_debug_log.txt"));
+        
         this.neo4jDriver = nd;
         this.senators = new ArrayList<>();
         this.sen_names  = new ArrayList<String>();
@@ -42,14 +49,16 @@ public class GraphReducer {
             this.sen_names.add(sen.name);
             this.sen_last_names.add(sen.lastName);
             for (String als_name:sen.alias){
-                System.out.println("alias name: "+als_name);
+                log.info("\n alias name: "+als_name);
                 this.sen_alias.put(als_name,(this.sen_names.size())-1);
 
             }
         }
         this.qb = new QueryBuilder();
 
-        System.out.println("Initialized Graph Reducer");
+
+
+        log.info("\n Initialized Graph Reducer");
     }
 
 
@@ -114,7 +123,7 @@ public class GraphReducer {
     public void runRules(String docId,int sen_id){
 
 
-        System.out.println("Processing docId: "+docId);
+        log.info("\n Processing docId: "+docId);
         coalesce_compound_edges_person_names(docId,sen_id);
         find_defined_NERs_and_unwanted(docId,sen_id);
         coalesce_compound_edges_next_to_persons(docId,sen_id);
@@ -153,7 +162,7 @@ public class GraphReducer {
             while (result.hasNext()){
 
                 Record record = result.next();
-                //System.out.println("coalescing "+record.get("aword" ).asString()+" AND " +record.get("bword"));
+                //log.info("\n coalescing "+record.get("aword" ).asString()+" AND " +record.get("bword"));
 
                 if (record.get("aidx").asInt()>record.get("bidx").asInt()){
                     cname = record.get("bword").asString()+" "+record.get("aword").asString();
@@ -168,7 +177,7 @@ public class GraphReducer {
 
                 session.run(coalesce_query);
 
-                System.out.println("coalesced "+record.get("aword" ).asString()+" AND " +record.get("bword").asString());
+                log.info("\n coalesced "+record.get("aword" ).asString()+" AND " +record.get("bword").asString());
 
 
             }
@@ -189,7 +198,7 @@ public class GraphReducer {
                 String pname = record.get("aword").asString();
                 known_entity_search_result ke = is_this_named_entity_needed(pname);
                 if (!ke.is_needed){
-                    System.out.println("find_NER_and_unwanted() : unknown person : "+pname);
+                    log.info("\n find_NER_and_unwanted() : unknown person : "+pname);
                     /*String discard_person_query = "MATCH (a:PERSON"+dId_sId+")-[r:dep]-() "+
                             "WHERE a.idx="+record.get("aidx").asInt()+" "+
                             "WITH a,r "+
@@ -254,12 +263,12 @@ public class GraphReducer {
         for (Object al_sen:this.sen_alias.keySet()){
             String al_sen_s = String.valueOf(al_sen);
             if (al_sen_s.equalsIgnoreCase(nst)){
-                System.out.println("known_entity_search_result: found: "+al_sen);
+                log.info("\n known_entity_search_result: found: "+al_sen);
                 ret=new known_entity_search_result(true,Integer.parseInt(sen_alias.get(al_sen).toString()));
                 return ret;
             }
             else{
-                System.out.println("known_entity_search_result: not found: "+al_sen);
+                log.info("\n known_entity_search_result: not found: "+al_sen);
             }
 
         }
@@ -336,7 +345,7 @@ public class GraphReducer {
     public String ret_rel_type(String ret){
 
         ret = ret.replaceAll(Pattern.quote("-"),"_");
-        System.out.println("ret_rel_type() : "+ret);
+        log.info("\n ret_rel_type() : "+ret);
         return ret;
 
     }
@@ -385,9 +394,9 @@ public class GraphReducer {
                     "RETURN path");
             while (p_result.hasNext()){
                 Record record  = p_result.next();
-                //System.out.println(record.keys());
-                //System.out.println(record.values().getClass().getName());
-                //System.out.println("###############");
+                //log.info(record.keys());
+                //log.info(record.values().getClass().getName());
+                //log.info("\n ###############");
                 Path pt = (record.values()).get(0).asPath();
 
 
@@ -400,20 +409,20 @@ public class GraphReducer {
                         "WHERE ( r.type=\"MAIN\") OR ( r1.type=\"MAIN\")\n" +
                         "RETURN r,r1";
                 res  = session.run(rel_exist_query);
-                //System.out.println("##rel_exists start##");
+                //log.info("\n ##rel_exists start##");
                 Record rel_exist_rd = res.next();
                 if (rel_exist_rd.toString().contains("{r: NULL, r1: NULL}")){
                     if (pt.start().get("k_id").asInt()==pt.end().get("k_id").asInt()) continue;
                     // there are NULL results for rel_exist_query. So path of type MAIN doesn't exists
-                    System.out.println("rel doesn't exist for "+pt.start().get("word")+"to "+pt.end().get("word") );
+                    log.info("\n rel doesn't exist for "+pt.start().get("word")+"to "+pt.end().get("word") );
                 }
                 else {
-                    System.out.println("rel exists for "+pt.start().get("word")+"to "+pt.end().get("word") );
+                    log.info("\n rel exists for "+pt.start().get("word")+"to "+pt.end().get("word") );
                     continue;
                 }
-                //System.out.println(res.next().keys());
-                //System.out.println(res.next().values());
-                //System.out.println("##rel_exists end##");
+                //log.info(res.next().keys());
+                //log.info(res.next().values());
+                //log.info("\n ##rel_exists end##");
 
 
 
@@ -424,7 +433,7 @@ public class GraphReducer {
                     if (nd==pt.start() ) continue;
                     if (nd==pt.end()){
                         rel_type = get_rel_type(w_list,t_list);
-                        System.out.println("Creating MAIN relation : "+pt.start().get("word")+" --> "+nd.get("word"));
+                        log.info("\n Creating MAIN relation : "+pt.start().get("word")+" --> "+nd.get("word"));
                         String query = "MATCH (n:PERSON"+dId_sId+") , (m:PERSON"+dId_sId+") " +
                                 "WHERE n.k_id ="+pt.start().get("k_id").asInt() +"" +
                                         " AND m.k_id ="+pt.end().get("k_id").asInt()+" " +
@@ -436,7 +445,7 @@ public class GraphReducer {
                                 "SET r.type =  \"MAIN\" "+
                                 "RETURN r" ;
 
-                        System.out.println(query);
+                        log.info(query);
                         e_res = session.run(query);
                         w_list.clear();
                         t_list.clear();
@@ -445,7 +454,7 @@ public class GraphReducer {
 
                     if (nd.hasLabel("PERSON")){
                         //This is a complex path connecting more than two PERSON , discard this path
-                        System.out.println("Exiting complex path: "+pt.start().get("word") +" -- "+ nd.get("word").asString()+" -> "+pt.start().get("word") );
+                        log.info("\n Exiting complex path: "+pt.start().get("word") +" -- "+ nd.get("word").asString()+" -> "+pt.start().get("word") );
                         w_list.clear();
                         t_list.clear();
                         break;
