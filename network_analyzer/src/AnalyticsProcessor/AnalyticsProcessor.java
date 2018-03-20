@@ -40,6 +40,7 @@ public class AnalyticsProcessor implements AutoCloseable {
 
     int totalSentences;
     int totalArticles;
+    int skippedArticles;
     Log log;
 
     String inFileName = "data/json/graphbuilder/test2graph.json";
@@ -69,6 +70,7 @@ public class AnalyticsProcessor implements AutoCloseable {
         this.newsArticles = new ArrayList<>();
         this.totalArticles = 0;
         this.totalSentences = 0;
+        this.skippedArticles = 0;
 
 
         this.loadJSON(inFileName);
@@ -195,6 +197,8 @@ public class AnalyticsProcessor implements AutoCloseable {
             String collectionTime = newsArticle.collectionDate.split(" ")[1];
 
             if (text == null || text.isEmpty()) {
+                skippedArticles++;
+                log.error("Skipped Article ID: " + docID);
                 continue;
             }
 
@@ -203,40 +207,48 @@ public class AnalyticsProcessor implements AutoCloseable {
             text = ac.clean();
 
             if (text.isEmpty()) {
+                skippedArticles++;
+                log.error("Skipped Article ID: " + docID);
                 continue;
             }
 
-            Annotation document = new Annotation(text);
-            pipeline.annotate(document);
+            try {
+                Annotation document = new Annotation(text);
+                pipeline.annotate(document);
 
-            // these are all the sentences in this document
-            // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
-            List<CoreMap> sentences = document.get(CoreAnnotations.SentencesAnnotation.class);
+                // these are all the sentences in this document
+                // a CoreMap is essentially a Map that uses class objects as keys and has values with custom types
+                List<CoreMap> sentences = document.get(CoreAnnotations.SentencesAnnotation.class);
 
-            int sentenceID = 0;
-            for (CoreMap sentence : sentences) {
-                sentenceID++;
+                int sentenceID = 0;
+                for (CoreMap sentence : sentences) {
+                    sentenceID++;
 
-                // this is the Stanford dependency graph of the current sentence
-                SemanticGraph dependencies = sentence.get(SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class);
+                    // this is the Stanford dependency graph of the current sentence
+                    SemanticGraph dependencies = sentence.get(SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class);
 
-                neo4JSemanticGraphBuilder(dependencies, docID, sentenceID,collectionDate,collectionTime);
-                totalSentences++;
+                    neo4JSemanticGraphBuilder(dependencies, docID, sentenceID, collectionDate, collectionTime);
+                    totalSentences++;
 //                break;
-            }
+                }
 
-            totalArticles++;
+                totalArticles++;
 //            break;
 
-            // Get elapsed time in milliseconds
-            long elapsedTimeMillis = System.currentTimeMillis()-start;
+                // Get elapsed time in milliseconds
+                long elapsedTimeMillis = System.currentTimeMillis() - start;
 
-            log.info("\n Articles: " + totalArticles +
-                    "\n Sentences: " + totalSentences+
-                    "\n %: " + (float)totalSentences/this.newsArticles.size()*100+
-                    "\n Time taken: " + (float)elapsedTimeMillis/1000 + "s");
+                log.info("\n Article ID: " + docID +
+                        "\n Time taken: " + (float) elapsedTimeMillis / 1000 + "s" +
+                        "\n processed Articles: " + totalArticles +
+                        "\n processed Sentences: " + totalSentences +
+                        "\n %completed: " + (float) totalSentences / this.newsArticles.size() * 100 +
+                        "\n skipped: " + skippedArticles);
+            } catch (Exception e) {
+                log.error("Article ID: " + docID);
+                log.error(e);
+            }
         }
-
         System.out.println("All done!!!");
     }
 

@@ -447,7 +447,7 @@ public class GraphReducer {
                         //This is a complex path connecting more than two PERSON , discard this path
                         System.out.println("Exiting complex path: "+pt.start().get("word") +" -- "+ nd.get("word").asString()+" -> "+pt.start().get("word") );
                         w_list.clear();
-                        w_list.clear();
+                        t_list.clear();
                         break;
                     }
 
