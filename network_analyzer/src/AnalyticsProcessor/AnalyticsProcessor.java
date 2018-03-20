@@ -43,7 +43,8 @@ public class AnalyticsProcessor implements AutoCloseable {
     int skippedArticles;
     Log log;
 
-    String inFileName = "data/json/graphbuilder/test2graph.json";
+    //String inFileName = "data/json/graphbuilder/test2graph.json";
+    String inFileName = "data/json/graphbuilder/Final_filteredNews_1.json";
 
     private final Driver neo4jDriver;
 
@@ -102,7 +103,9 @@ public class AnalyticsProcessor implements AutoCloseable {
             while (i.hasNext())
             {
                 JSONObject jsonObject = (JSONObject)i.next();
-                String news = (String) jsonObject.get("news");
+               // String news = (String) jsonObject.get("news");
+                String news = (String) jsonObject.get("newsText");
+
                 Long newsId = (Long) jsonObject.get("newsId");
                 String collectionDate = (String) jsonObject.get("converted_collection_date");
                 String source = (String) jsonObject.get("src");
@@ -248,7 +251,7 @@ public class AnalyticsProcessor implements AutoCloseable {
                         "\n Time taken: " + (float) elapsedTimeMillis / 1000 + "s" +
                         "\n processed Articles: " + totalArticles +
                         "\n processed Sentences: " + totalSentences +
-                        "\n %completed: " + (float) totalSentences / this.newsArticles.size() * 100 +
+                        "\n %completed: " + (float) totalArticles / this.newsArticles.size() * 100 +
                         "\n skipped: " + skippedArticles);
             } catch (Exception e) {
                 log.error("Article ID: " + docID);
