@@ -51,11 +51,13 @@ public class AnalyticsProcessor implements AutoCloseable {
         String newsArticle;
         String newsID;
         String collectionDate;
+        String source;
 
-        NewsArticles (String news, Long id, String date) {
+        NewsArticles (String news, Long id, String date, String src) {
             newsArticle = news;
             newsID = id.toString();
             collectionDate = date;
+            source = src;
         }
     }
 
@@ -103,8 +105,9 @@ public class AnalyticsProcessor implements AutoCloseable {
                 String news = (String) jsonObject.get("news");
                 Long newsId = (Long) jsonObject.get("newsId");
                 String collectionDate = (String) jsonObject.get("converted_collection_date");
+                String source = (String) jsonObject.get("src");
 
-                this.newsArticles.add(new NewsArticles(news, newsId, collectionDate));
+                this.newsArticles.add(new NewsArticles(news, newsId, collectionDate, source));
             }
             System.out.println("Total articles: " + Integer.toString(this.newsArticles.size()));
             log.info("Total articles: " + Integer.toString(this.newsArticles.size()));
@@ -114,7 +117,7 @@ public class AnalyticsProcessor implements AutoCloseable {
    }
 
     private void neo4JSemanticGraphBuilder(SemanticGraph dependencies, String docId, int senId,
-                                           String collectionDate, String collectionTime) throws IOException {
+                                           String collectionDate, String collectionTime, String src) throws IOException {
         List<SemanticGraphEdge> edgeList = dependencies.edgeListSorted();
         ListIterator<SemanticGraphEdge> it = edgeList.listIterator();
 
@@ -143,6 +146,7 @@ public class AnalyticsProcessor implements AutoCloseable {
                         + ", senId : " + String.valueOf(senId)
                         + ", Date: \"" + collectionDate + "\""
                         + ", Time: \"" + collectionTime + "\""
+                        + ", source: \"" + src + "\""
                         +", tag : \""+s_tag+"\" }) "
                         + "MERGE (b:"+t_ner+" { word: \"" + target
                         + "\", idx: "+ String.valueOf(targetIdx)
@@ -150,6 +154,7 @@ public class AnalyticsProcessor implements AutoCloseable {
                         + ",senId : " + String.valueOf(senId)
                         + ", Date: \"" + collectionDate + "\""
                         + ", Time: \"" + collectionTime  + "\""
+                        + ", source: \"" + src + "\""
                         + ", tag :\"" +t_tag+ "\"})"
                         + "MERGE (a)-[r:dep{type:\""+relation+"\"}]->(b)");
             }
@@ -193,6 +198,7 @@ public class AnalyticsProcessor implements AutoCloseable {
         for (NewsArticles newsArticle: newsArticles) {
             String text = newsArticle.newsArticle;
             String docID = newsArticle.newsID;
+            String source = newsArticle.source;
             String collectionDate = newsArticle.collectionDate.split(" ")[0];
             String collectionTime = newsArticle.collectionDate.split(" ")[1];
 
@@ -227,7 +233,7 @@ public class AnalyticsProcessor implements AutoCloseable {
                     // this is the Stanford dependency graph of the current sentence
                     SemanticGraph dependencies = sentence.get(SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class);
 
-                    neo4JSemanticGraphBuilder(dependencies, docID, sentenceID, collectionDate, collectionTime);
+                    neo4JSemanticGraphBuilder(dependencies, docID, sentenceID, collectionDate, collectionTime, source);
                     totalSentences++;
 //                break;
                 }
