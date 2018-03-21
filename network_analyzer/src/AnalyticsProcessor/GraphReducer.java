@@ -128,6 +128,7 @@ public class GraphReducer {
         find_defined_NERs_and_unwanted(docId,sen_id);
         coalesce_compound_edges_next_to_persons(docId,sen_id);
         coalesce_compound_words(docId,sen_id);
+        reduce_appos_edges_to_person_titles(docId,sen_id);
 
         traverse_path_connecting_ners(docId,sen_id);
     }
@@ -305,6 +306,38 @@ public class GraphReducer {
 
             result = session.run(set_alias);
             result = session.run(coalesce_query);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
+
+    /**
+     * Reduce nodes connected with appos edges to persons  , to person titles
+     *
+     * step-1 : Find the node connected to person with appos .
+     *          If this node has any other relationships transfer, these relationships to person node
+     *
+     * step-2 : Append this node's  word attribute to person's titles and delete this node.
+     *
+
+     */
+
+    public void reduce_appos_edges_to_person_titles(String docId,int sen_id){
+        String dId_sId="{docId:"+docId+" , senId:"+sen_id+"}";
+        StatementResult result;
+        List<Object> args =  new ArrayList<Object>();
+        args.add(dId_sId);
+        String raep_1 = qb.buildquery("reduce_appos_edges_1",args);
+        String raep_2 = qb.buildquery("reduce_appos_edges_2",args);
+
+        try (Session session = this.neo4jDriver.session()){
+
+            result = session.run(raep_1);
+            result = session.run(raep_2);
+
         }
         catch (Exception e){
             e.printStackTrace();

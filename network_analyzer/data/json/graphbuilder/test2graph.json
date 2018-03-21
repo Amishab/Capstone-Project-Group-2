@@ -20,7 +20,7 @@
 	"letter",
 	"respect"],
 	"publish_date": "2017-10-27 12:11:06+00:00",
-	"news": "Senate Majority Leader Mitch McConnell of Ky., who has also been the target of Trump’s attacks after the Senate’s failure to pass health care legislation, didn’t directly answer when asked at an event in Hazard, Kentucky, whether he shared Corker’s sentiments",
+	"newsText": "Senate Majority Leader Mitch McConnell of Ky., who has also been the target of Trump’s attacks after the Senate’s failure to pass health care legislation, didn’t directly answer when asked at an event in Hazard, Kentucky, whether he shared Corker’s sentiments",
 	"collection_date": "Fri Oct 27 19:08:18 2017",
 	"converted_collection_date": "10-27-2017 19:08:18"
 },
@@ -54,7 +54,7 @@
       "personal",
       "republican"
     ],
-    "news": "But they were far from a guarantee of a path forward for the new legislation by Sen. Dianne Feinstein, especially with Majority Leader Mitch McConnell and House Speaker Paul Ryan making clear their priorities are elsewhere",
+    "newsText": "But they were far from a guarantee of a path forward for the new legislation by Sen. Dianne Feinstein, especially with Majority Leader Mitch McConnell and House Speaker Paul Ryan making clear their priorities are elsewhere",
     "collection_date": "Fri Nov 17 00:17:39 2017",
     "publish_date": "2017-11-16 00:00:00",
     "converted_collection_date": "11-17-2017 00:17:39"
@@ -80,7 +80,7 @@
 	"2017",
 	"armenian",
 	"summit"],
-	"news": "On Wednesday, U.S. Senators John McCain and Bob Menendez led a bipartisan letter to President Trump today calling on the administration to urge Turkish President Tayyip Erdogan to stop harassing American diplomats, to respect human rights, and to uphold democratic values in Turkey.",
+	"newsText": "On Wednesday, U.S. Senators John McCain and Bob Menendez led a bipartisan letter to President Trump today calling on the administration to urge Turkish President Tayyip Erdogan to stop harassing American diplomats, to respect human rights, and to uphold democratic values in Turkey.",
 	"collection_date": "Thu Nov  2 22:13:34 2017",
 	"converted_collection_date": "11-02-2017 22:13:34",
 	"publish_date": "2017-11-02 15:27:09+00:00"
@@ -105,7 +105,7 @@
 	"apples",
 	"armenian",
 	"series"],
-	"news": "The letter was co-signed by Senators Ben Cardin, John Boozman, Chris Van Hollen, Marco Rubio, Richard Durbin , John Cornyn, Chris Coons, Martin Heinrich, Edward Markey, Tammy Baldwin, Jeanne Shaheen, and Bernard Sanders.",
+	"newsText": "The letter was co-signed by Senators Ben Cardin, John Boozman, Chris Van Hollen, Marco Rubio, Richard Durbin , John Cornyn, Chris Coons, Martin Heinrich, Edward Markey, Tammy Baldwin, Jeanne Shaheen, and Bernard Sanders.",
 	"collection_date": "Wed Dec 13 00:31:08 2017",
 	"converted_collection_date": "12-13-2017 00:31:08",
 	"publish_date": "2017-12-12 13:39:16+00:00"
@@ -133,7 +133,7 @@
 	"civil",
 	"social",
 	"white"],
-	"news": "Cornyn later said Cornyn’d spoken with Judiciary Committee Chairman Chuck Grassley, and that Grassley was interested in convening a hearing.",
+	"newsText": "Cornyn later said Cornyn’d spoken with Judiciary Committee Chairman Chuck Grassley, and that Grassley was interested in convening a hearing.",
 	"collection_date": "Tue Aug 22 21:51:52 2017",
 	"converted_collection_date": "08-22-2017 21:51:52",
 	"publish_date": "2017-08-19 00:00:00"
@@ -161,7 +161,7 @@
 	"university",
 	"college",
 	"message"],
-	"news": "Now that Republicans control both the White House and Congress, top party officials, including Mitch McConnell, the Senate majority leader, are itching to eliminate the last remaining tool the minority party has to influence a president's picks for the federal courts the so-called blue slip.",
+	"newsText": "Now that Republicans control both the White House and Congress, top party officials, including Mitch McConnell, the Senate majority leader, are itching to eliminate the last remaining tool the minority party has to influence a president's picks for the federal courts the so-called blue slip.",
 	"collection_date": "Tue Aug 22 21:53:28 2017",
 	"converted_collection_date": "08-22-2017 21:53:28",
 	"publish_date": "2017-08-17 00:00:00"
@@ -192,7 +192,7 @@
 	"killed",
 	"took",
 	"wounded"],
-	"news": "This abuse of blue slips led many, including this page, to call for an end to the practice, but Mr. Leahy continued it \u0097 as did Senator Charles Grassley of Iowa, who became chairman of the Judiciary Committee after Republicans won the Senate in 2014.",
+	"newsText": "This abuse of blue slips led many, including this page, to call for an end to the practice, but Mr. Leahy continued it \u0097 as did Senator Charles Grassley of Iowa, who became chairman of the Judiciary Committee after Republicans won the Senate in 2014.",
 	"collection_date": "Tue Aug 22 21:54:49 2017",
 	"converted_collection_date": "08-22-2017 21:54:49",
 	"publish_date": "2017-08-18 00:00:00"
@@ -219,7 +219,7 @@
 	"immigration",
 	"voters",
 	"support"],
-	"news": "Blunt’s comments followed a plea from GOP Sen. Chuck Grassley at a town hall meeting in Jefferson, Iowa, on Monday, for Trump and Corker to “cool it",
+	"newsText": "Blunt’s comments followed a plea from GOP Sen. Chuck Grassley at a town hall meeting in Jefferson, Iowa, on Monday, for Trump and Corker to “cool it",
 	"collection_date": "Tue Aug 22 21:55:17 2017",
 	"converted_collection_date": "08-22-2017 21:55:17",
 	"publish_date": "2017-08-17 00:00:00"
@@ -246,7 +246,7 @@
 	"administrator",
 	"king",
 	"licensed"],
-	"news": "The comments from lawmakers including the No. 2 Senate Republican, John Cornyn of Texas, marked a surprising departure from GOP lawmakers’ general antipathy to gun regulations of any kind.",
+	"newsText": "The comments from lawmakers including the No. 2 Senate Republican, John Cornyn of Texas, marked a surprising departure from GOP lawmakers’ general antipathy to gun regulations of any kind.",
 	"collection_date": "Wed Aug 23 14:03:59 2017",
 	"converted_collection_date": "08-23-2017 14:03:59",
 	"publish_date": "None"

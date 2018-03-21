@@ -43,8 +43,8 @@ public class AnalyticsProcessor implements AutoCloseable {
     int skippedArticles;
     Log log;
 
-    //String inFileName = "data/json/graphbuilder/test2graph.json";
-    String inFileName = "data/json/graphbuilder/Final_filteredNews_1.json";
+    String inFileName = "data/json/graphbuilder/test2graph.json";
+    //String inFileName = "data/json/graphbuilder/Final_filteredNews_1.json";
 
     private final Driver neo4jDriver;
 

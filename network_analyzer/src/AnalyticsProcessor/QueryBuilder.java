@@ -32,6 +32,24 @@ public class QueryBuilder {
             "FOREACH (cmp in c_list| SET n.word = n.word+\" \"+cmp.word DETACH DELETE cmp ) \n" +
             "RETURN n";
 
+    //Query to reduce appos edges next to person nodes - step1
+    String  raenp_1 ="MATCH (n:PERSON %s)-[r]-(m) WHERE r.type=\"appos\"\n" +
+            "WITH n,m\n" +
+            "MATCH (m)-[r1]-(a) WHERE r1.type<>\"appos\"\n" +
+            "WITH n,collect(r1) as rels ,collect(a) as others\n" +
+            "WITH n, rels,others,range(0,size(rels)-1) as idx\n" +
+            "UNWIND idx as i\n" +
+            "\tWITH others[i] as ot ,rels[i] as re,n\n" +
+            "    CREATE (n)-[r:dep]->(ot)\n" +
+            "    SET r=re\n" +
+            "    DELETE re\n" +
+            "RETURN *";
+    String  raenp_2 =
+            "MATCH (n:PERSON %s)-[r]-(m) WHERE r.type=\"appos\" AND size((m)--())=1 \n" +
+            "SET n += {title:m.word}\n" +
+            "DETACH DELETE m\n" +
+            "RETURN n";
+
 
 
 
@@ -42,6 +60,8 @@ public class QueryBuilder {
         queries.put("coalesce_compounds_next_to_persons",ccntp);
         queries.put("set_alias_persons",sap);
         queries.put("coalesce_compound_words",ccw);
+        queries.put("reduce_appos_edges_1",raenp_1);
+        queries.put("reduce_appos_edges_2",raenp_2);
 
     }
 
