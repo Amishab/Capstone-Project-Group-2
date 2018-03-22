@@ -540,6 +540,7 @@ public class GraphReducer {
                                 "SET r.Time = \""+ pt.start().get("Time").asString()+"\" "+
                                 "SET r.docId = \""+ pt.start().get("docId").toString()+"\" "+
                                 "SET r.senId = "+ pt.start().get("senId").asInt()+" "+
+                                "SET r.source = \""+ pt.start().get("source").asString()+"\" "+
                                 "SET r.type =  \"MAIN\" "+
                                 "RETURN r" ;
 
@@ -578,4 +579,5 @@ public class GraphReducer {
 
 
     }
+
 }
