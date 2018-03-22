@@ -1,5 +1,8 @@
 package AnalyticsProcessor;
 
+import org.neo4j.driver.v1.Record;
+import org.neo4j.driver.v1.StatementResult;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -151,6 +154,13 @@ public class QueryBuilder {
                     "WHERE n.k_id=m.k_id AND id(n)<id(m)\n" +
                     "RETURN count(n) > 0 as result";
 
+    //Query to get the multiple d_persons names and dup_counts
+    String get_m_d_p =
+                    "MATCH (n:D_PERSON),(m:D_PERSON) \n " +
+                    "WHERE n.k_id=m.k_id AND id(n)<id(m) \n" +
+                    "WITH n.word as name, count(n) as dup_count \n" +
+                    "RETURN name,dup_count";
+
     //Query to merge d_persons with same k_id
     String m_d_p_same_k_id=
                     "MATCH (n:D_PERSON),(m:D_PERSON) \n" +
@@ -227,6 +237,7 @@ public class QueryBuilder {
         queries.put("create_rels_nodes_same_k_id",cr_rel_s_k_id);
         queries.put("delete_this_relationship_with_id",del_rel_s_k_id);
         queries.put("delete_this_node_with_id",del_node_s_k_id);
+        queries.put("get_multi_d_p_dup_count",get_m_d_p);
 
     }
 
@@ -254,6 +265,27 @@ public class QueryBuilder {
 
 
 
+
+        return ret;
+
+    }
+
+    public String result_as_tab_string(StatementResult res){
+        Record rec;
+        String ret="\n"+String.format("%-30s"," ") ;
+        //ret += res.keys();
+        for (String key :res.keys()){
+            ret +=String.format("%-20s",key);
+        }
+        ret += "\n"+String.format("%-30s"," ");
+        while(res.hasNext()){
+            rec = res.next();
+            for(String key: res.keys()){
+                ret += String.format("%-20s",rec.get(key).toString());
+            }
+            ret += "\n"+String.format("%-30s"," ");
+
+        }
 
         return ret;
 
