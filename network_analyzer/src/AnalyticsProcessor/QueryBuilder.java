@@ -212,6 +212,15 @@ public class QueryBuilder {
                     "WHERE id(n)=%d " +
                     "DELETE n";
 
+    //Query to get all relations inferred from a sentence containing a word
+    String get_inf_rel_f_w =
+                    "MATCH (n)\n" +
+                    "WHERE n.word CONTAINS \"%s\"\n" +
+                    "WITH collect(n.docId) as docs\n" +
+                    "UNWIND docs as e_doc\n" +
+                    "MATCH ()-[r]->() WHERE toInteger(r.docId)=toInteger(e_doc)  \n" +
+                    "RETURN startNode(r).word as n , r.docId as doc, type(r) as relation, r.w_list as words, endNode(r).word as m";
+
 
 
 
@@ -238,6 +247,7 @@ public class QueryBuilder {
         queries.put("delete_this_relationship_with_id",del_rel_s_k_id);
         queries.put("delete_this_node_with_id",del_node_s_k_id);
         queries.put("get_multi_d_p_dup_count",get_m_d_p);
+        queries.put("get_inferred_relations_for_news_containing_word",get_inf_rel_f_w);
 
     }
 
