@@ -315,6 +315,7 @@ public class GraphReducer {
 
     }
 
+
     /**
      * Reduce nodes connected with appos edges to persons  , to person titles
      *
@@ -535,8 +536,8 @@ public class GraphReducer {
                                 "CREATE (n)-[r:"+rel_type+"]->(m) " +
                                 "SET r.w_list= " + array_to_list_query(w_list)+" "+
                                 "SET r.t_list= " + array_to_list_query(t_list)+" "+
-                                "SET r.Date = \""+ pt.start().get("Date").asString().replace("-","_")+"\" "+
-                                "SET r.Time = \""+ pt.start().get("Time").asString().replace(":","_")+"\" "+
+                                "SET r.Date = \""+ pt.start().get("Date").asString()+"\" "+
+                                "SET r.Time = \""+ pt.start().get("Time").asString()+"\" "+
                                 "SET r.docId = \""+ pt.start().get("docId").toString()+"\" "+
                                 "SET r.senId = "+ pt.start().get("senId").asInt()+" "+
                                 "SET r.type =  \"MAIN\" "+
