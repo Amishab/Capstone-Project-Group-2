@@ -132,6 +132,8 @@ public class GraphReducer {
         reduce_conj_and_edges_form_person_group(docId,sen_id);
 
         traverse_path_connecting_ners(docId,sen_id);
+
+        combine_d_persons_from_all_sentences();
     }
 
 
@@ -576,6 +578,60 @@ public class GraphReducer {
             }
 
         }
+
+
+    }
+
+
+
+
+    /**
+     * step1 : remove d_person node's  properties like  DocId , sen Id , time , Date
+     */
+    public void combine_d_persons_from_all_sentences(){
+        StatementResult result;
+        Integer m_id=0;
+        List<Object> args = new ArrayList<Object>();
+        Session session = this.neo4jDriver.session();
+        String rem_t_d_p = qb.buildquery("remove_temporal_attributes_from_d_person",args);
+
+        result=session.run(rem_t_d_p);
+
+        String if_same_k_id_exists = qb.buildquery("check_if_multi_d_persons_same_k_id",args);
+
+        while (session.run(if_same_k_id_exists).next().get("result").asBoolean()){
+
+            String get_rels_nodes_query = qb.buildquery("get_rels_nodes_for_sec_k_id",args);
+            result = session.run(get_rels_nodes_query);
+            while(result.hasNext()){
+                Record rec = result.next();
+                args.add(rec.get("id_n").asInt());
+                args.add(rec.get("id_ot").asInt());
+                args.add(rec.get("t_rel").asString());
+                //args.add(rec.get("rel").asMap().toString());
+                String cr_rels_query = qb.buildquery_dynamic("create_rels_nodes_same_k_id",args,rec.get("rel").asMap());
+                session.run(cr_rels_query);
+                //log.info(cr_rels_query);
+                args.clear();
+                args.add(rec.get("id_rel").asInt());
+                String del_rel_query = qb.buildquery("delete_this_relationship_with_id",args);
+                session.run(del_rel_query);
+                args.clear();
+                m_id = rec.get("id_m").asInt();
+            }
+
+            args.clear();
+            args.add(m_id);
+            String del_node_query = qb.buildquery("delete_this_node_with_id",args);
+            session.run(del_node_query);
+
+            //log.info("multiple persons deleted");
+
+        }
+
+        //log.info("removed temporal attributes from all d_person nodes "+result.next());
+
+
 
 
     }

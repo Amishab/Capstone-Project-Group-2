@@ -2,6 +2,7 @@ package AnalyticsProcessor;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class QueryBuilder {
@@ -137,6 +138,71 @@ public class QueryBuilder {
                     "        RETURN n,ot,rl";
 
 
+    //Query to remove temporal data to d_person nodes
+    String rem_t_d_p =
+                    "MATCH (n:D_PERSON)\n" +
+                    "WHERE EXISTS(n.docId)\n" +
+                    "REMOVE n.Date,n.Time,n.docId,n.senId,n.source,n.idx,n.tag\n" +
+                    "RETURN n";
+
+    //Query to check if multiple d_persons with same k_id exists
+    String if_s_d_p_e =
+                    "MATCH (n:D_PERSON),(m:D_PERSON)\n" +
+                    "WHERE n.k_id=m.k_id AND id(n)<id(m)\n" +
+                    "RETURN count(n) > 0 as result";
+
+    //Query to merge d_persons with same k_id
+    String m_d_p_same_k_id=
+                    "MATCH (n:D_PERSON),(m:D_PERSON) \n" +
+                    "WHERE n.k_id=m.k_id AND id(n)<id(m)\n" +
+                    "WITH n,m LIMIT 1 \n" +
+                    "  MATCH (m)-[r]-(other_m) WHERE id(other_m)<>id(n)\n" +
+                    "  WITH n,m,collect(r) as rels_m ,collect(other_m) as ot_m\n" +
+                    "    WITH n,m,rels_m,ot_m,range(0,size(rels_m)-1) as idx \n" +
+                    "      SET n.alias = n.alias+m.alias\n" +
+                    "      SET n.title = n.title+n.title\n" +
+                    "      DELETE m \n" +
+                    "      WITH n,rels_m,ot_m,idx \n" +
+                    "        UNWIND idx as i \n" +
+                    "        WITH n,ot_m[i] as ot,rels_m[i] as rel\n" +
+                    "          WITH n,ot,rel,type(rel) as tr\n" +
+                    "            MERGE (n)-[r:tr]-(ot)\n" +
+                    "            SET r=rel \n" +
+                    "            DELETE rel \n" +
+                    "            RETURN n,ot,rel";
+
+    //Query to get relationships and nodes connected to the second node with same k_id
+    String get_r_n_k_id  =
+                    "MATCH (n:D_PERSON),(m:D_PERSON) \n" +
+                    "WHERE n.k_id=m.k_id AND id(n)<id(m)\n" +
+                    "WITH n,m LIMIT 1 \n" +
+                    "  MATCH (m)-[r]-(other_m) WHERE id(other_m)<>id(n)\n" +
+                    "  WITH n,m,collect(r) as rels_m ,collect(other_m) as ot_m\n" +
+                    "    WITH n,m,rels_m,ot_m,range(0,size(rels_m)-1) as idx \n" +
+                    "      SET n.alias = n.alias+m.alias\n" +
+                    "      SET n.title = n.title+n.title\n" +
+                    "      WITH n,m,rels_m,ot_m,idx \n" +
+                    "        UNWIND idx as i \n" +
+                    "        WITH n,m,ot_m[i] as ot,rels_m[i] as rel\n" +
+                    "          RETURN id(n) as id_n,id(m) as id_m ,id(ot) as id_ot ,rel,type(rel) as t_rel,id(rel) as id_rel";
+
+    //Query to create a relationship for same_k_id
+    String cr_rel_s_k_id =
+                    "MATCH (n:D_PERSON),(ot) \n" +
+                    "WHERE id(n)=%d AND id(ot)=%d \n" +
+                    "MERGE (n)-[r:%s ]-(ot)";
+
+    //Query to delete this relationship for same_k_id
+    String del_rel_s_k_id =
+            "MATCH ()-[r]-() WHERE id(r)=%d DELETE r";
+
+    //Query to delete this node for same_k_id
+    String del_node_s_k_id =
+                    "MATCH (n)  " +
+                    "WHERE id(n)=%d " +
+                    "DELETE n";
+
+
 
 
     public QueryBuilder() {
@@ -154,6 +220,42 @@ public class QueryBuilder {
         queries.put("reduce_d_person_group_conj_and_d_person",r_ca_pg_dp);
         queries.put("check_if_person_group_conj_and_person_group",if_pg_ca_pg);
         queries.put("reduce_d_person_group_conj_and_d_person_group",r_pg_ca_pg);
+        queries.put("remove_temporal_attributes_from_d_person",rem_t_d_p);
+        queries.put("check_if_multi_d_persons_same_k_id",if_s_d_p_e);
+        queries.put("merge_d_persons_same_k_id",m_d_p_same_k_id);    //This query doesn't work, as relationships cannot be passed in as parameters
+        queries.put("get_rels_nodes_for_sec_k_id",get_r_n_k_id);
+        queries.put("create_rels_nodes_same_k_id",cr_rel_s_k_id);
+        queries.put("delete_this_relationship_with_id",del_rel_s_k_id);
+        queries.put("delete_this_node_with_id",del_node_s_k_id);
+
+    }
+
+
+    public String buildquery_dynamic(String qr, List<Object> args, Map<String,Object> map){
+
+        String q_str,ret;
+
+        q_str = this.queries.get(qr).toString();
+        ret = String.format(q_str,args.toArray());
+
+        for(String key:map.keySet()){
+            //System.out.println(map.get(key));
+            if (key.equals("docId") || (key.equals("type")) || (key.equals("Date")) || (key.equals("Time")) || (key.equals("source")) ) {
+                ret = ret + "\n SET r."+key+"=";
+                ret = ret+"\""+map.get(key)+"\"";
+            }else if (key.equals("senId")){
+                ret = ret + "\n SET r."+key+"=";
+                ret = ret+map.get(key);
+            }else if ((key.equals("t_list")) ||(key.equals("w_list"))) {
+                ret = ret + "\n SET r."+key+"=";
+                ret = ret +map.get(key).toString().replace("[","[\"").replace(",","\",\"").replace("]","\"]");
+            }
+        }
+
+
+
+
+        return ret;
 
     }
 
