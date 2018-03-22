@@ -129,6 +129,7 @@ public class GraphReducer {
         coalesce_compound_edges_next_to_persons(docId,sen_id);
         coalesce_compound_words(docId,sen_id);
         reduce_appos_edges_to_person_titles(docId,sen_id);
+        reduce_conj_and_edges_form_person_group(docId,sen_id);
 
         traverse_path_connecting_ners(docId,sen_id);
     }
@@ -346,6 +347,65 @@ public class GraphReducer {
 
     }
 
+
+    /**
+     * Reduce "conj_and" connected persons to person groups.
+     * @param docId
+     * @param sen_id
+     */
+    public void reduce_conj_and_edges_form_person_group(String docId,int sen_id){
+        String dId_sId="{docId:"+docId+" , senId:"+sen_id+"}";
+        StatementResult result;
+        List<Object> args =  new ArrayList<Object>();
+        args.add(dId_sId);
+        String if_2p_ca_query    = qb.buildquery("check_if_2_d_persons_conj_and",args);
+        String if_p_ca_pg_query  = qb.buildquery("check_if_d_person_conj_and_person_group",args);
+        String if_pg_ca_pg_query = qb.buildquery("check_if_person_group_conj_and_person_group",args);
+
+
+        Session session = this.neo4jDriver.session();
+        result = session.run(if_2p_ca_query);
+        Record rec = result.next();
+        if (!rec.get("result").asBoolean()){
+            //There are no patterns of " two d_persons connected by conj_and " , returning
+            return;
+        }
+        //reduce each two d_persons to a group , until there are no two d_persons with conj_and
+        while (session.run(if_2p_ca_query).next().get("result").asBoolean()){
+            String r_dp_ca_pg = qb.buildquery("reduce_2_d_persons_conj_and_to_group",args);
+            session.run(r_dp_ca_pg);
+        }
+
+        //check if there are any d_persons connected to person_group with conj_and
+        //reduce all such conj_and
+        while (session.run(if_p_ca_pg_query).next().get("result").asBoolean()){
+            String r_pg_ca_dp = qb.buildquery("reduce_d_person_group_conj_and_d_person",args);
+            session.run(r_pg_ca_dp);
+        }
+
+        //check if there is any "conj_and" between person_group and person_group
+        //reduce all such conj_and  , to form a single person_group
+        while (session.run(if_pg_ca_pg_query).next().get("result").asBoolean()){
+
+            String r_pg_ca_pg = qb.buildquery("reduce_d_person_group_conj_and_d_person_group",args);
+            session.run(r_pg_ca_pg);
+            log.info("reduced person_groups: "+docId);
+
+
+        }
+
+
+
+        //log.info("reduced conj_and between 2 d_persons : "+docId);
+
+
+
+
+
+
+
+    }
+
     public void coalesce_compound_words (String docId,int sen_id){
         String dId_sId="{docId:"+docId+" , senId:"+sen_id+"}";
         StatementResult result;
@@ -491,6 +551,12 @@ public class GraphReducer {
                         w_list.clear();
                         t_list.clear();
                         break;
+                    }
+
+                    if (nd.hasLabel("D_PERSON_GROUP")){
+                        //encountered an person group.  There is no need to capture the w_list from here. Since it just contains names of senators
+                        log.info("\nSkipping this person group : "+nd.get("word").asString());
+                        continue;
                     }
 
                     w_list.add(nd.get("word").asString());
